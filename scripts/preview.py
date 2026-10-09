@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 import mimetypes,argparse
 ROOT=Path(__file__).resolve().parents[1]
-ALLOWED={'index.html','assets/app.js','assets/catalog.js','assets/style.css','assets/brand.svg','data/index-data.js','data/index-report.json'}
+ALLOWED={'index.html','assets/app.js','assets/i18n.js','assets/catalog.js','assets/style.css','assets/brand.svg','data/index-data.js','data/index-report.json'}
 class Preview(BaseHTTPRequestHandler):
     def do_GET(self):
         name=urlsplit(self.path).path.lstrip('/') or 'index.html'

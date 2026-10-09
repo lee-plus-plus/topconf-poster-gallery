@@ -22,13 +22,13 @@ const scalar=['q','sort','view','columns'];
 function element(tag,text,className){const e=document.createElement(tag);if(text)e.textContent=text;if(className)e.className=className;return e;}
 function link(url,text){const a=element('a',text);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;}
 function params(value=state){const p=new URLSearchParams();for(const key of scalar)if(value[key])p.set(key,value[key]);p.set('lab','0');p.set('field','title_authors');p.set('match','any');p.set('tag_match','any');for(const key of groups){if(value[key].length)value[key].forEach(v=>p.append(key,v));else if(key==='type')p.set(key,'all');}return p;}
-function fromURL(p){const value=defaults();for(const key of scalar)if(p.has(key))value[key]=p.get(key);for(const key of groups)if(p.has(key))value[key]=p.getAll(key).flatMap(v=>v.split(',')).filter(v=>v&&v!=='all'&&v!=='featured');if(p.get('type')==='featured')value.type=['Oral','Spotlight'];if(p.has('source')){const [venue,year]=p.get('source').split('-');value.venue=[venue];value.year=[year];}value.topic=[...new Set([...value.topic,...p.getAll('tag').flatMap(v=>v.split(',')).filter(Boolean)])];return value;}
+function fromURL(p){const value=defaults();for(const key of scalar)if(p.has(key))value[key]=p.get(key);for(const key of groups)if(p.has(key))value[key]=p.getAll(key).flatMap(v=>v.split(',')).filter(v=>v&&v!=='all'&&v!=='featured');if(p.get('type')==='featured')value.type=['Oral','Spotlight'];if(p.has('source')){const [venue,year]=p.get('source').split('-');value.venue=[venue];value.year=[year];}value.topic=[...new Set([...value.topic,...p.getAll('tag').flatMap(v=>v.split(',')).filter(Boolean)])];value.topic=value.topic.filter(v=>v!=='其他方向');return value;}
 function readStored(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 function store(key,value){try{localStorage.setItem(key,JSON.stringify(value));}catch{}}
 const initial=new URLSearchParams(location.search);
 state=initial.size?fromURL(initial):{...defaults(),...readStored('poster-filter-last',{})};
 for(const key of groups)if(!Array.isArray(state[key]))state[key]=[];
-state.topic=[...new Set([...state.topic,...(Array.isArray(state.tag)?state.tag:[])])];delete state.tag;delete state.page;
+state.topic=[...new Set([...state.topic,...(Array.isArray(state.tag)?state.tag:[])])];state.topic=state.topic.filter(v=>v!=='其他方向');delete state.tag;delete state.page;
 // Single-choice controls share the same menu surface as multi-choice filters.
 function syncDropdowns(){for(const key of ['sort','view','columns']){const select=$(key),menu=$('menu-'+key);menu.querySelector('summary span').textContent=select.selectedOptions[0].textContent;for(const button of menu.querySelectorAll('[data-value]')){const selected=button.dataset.value===select.value;button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));}}}
 for(const key of ['sort','view','columns']){

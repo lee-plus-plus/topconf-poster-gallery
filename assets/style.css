@@ -45,3 +45,5 @@ dialog[open]{display:flex;flex-direction:column;overflow:visible}
 #load-sentinel.is-loading::before{content:"";width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:poster-loading .8s linear infinite}
 @keyframes poster-loading{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){#load-sentinel.is-loading::before{animation:none}}
+
+.header-actions{display:flex;align-items:center;gap:8px;flex:none}html[lang=en] .topic-menu .filter-popover{width:min(380px,calc(100vw - 32px))}

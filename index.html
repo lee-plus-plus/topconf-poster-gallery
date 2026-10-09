@@ -10,13 +10,14 @@
   <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},startup:{typeset:false}};</script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-svg.js" onload="window.dispatchEvent(new Event('mathjax-ready'))"></script>
   <script defer src="data/index-data.js"></script>
+  <script defer src="assets/i18n.js"></script>
   <script defer src="assets/catalog.js"></script>
   <script defer src="assets/app.js"></script>
 </head>
 <body>
   <header class="hero"><div class="hero-inner">
     <div class="brand"><img src="assets/brand.svg" alt="" width="28" height="28"><h1>Top-Conf Poster Gallery</h1><span>顶会论文海报</span></div>
-    <button id="refresh" class="soft-button" type="button">更新</button>
+    <div class="header-actions"><button id="language" class="soft-button" type="button" aria-label="切换为英文">English</button><button id="refresh" class="soft-button" type="button">更新</button></div>
   </div></header>
   <section class="stickbar" aria-label="论文筛选"><div class="stickbar-inner">
     <form id="filters">
