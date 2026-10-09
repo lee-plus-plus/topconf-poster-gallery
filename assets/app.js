@@ -186,6 +186,3 @@ async function detectPosters(){
 }
 
 (async()=>{reflect();await load();const before=catalog.sources.map(s=>s.last_success).join('|');await catalog.init();if(before!==catalog.sources.map(s=>s.last_success).join('|'))await load();})();
-
-
-

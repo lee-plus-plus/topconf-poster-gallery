@@ -228,5 +228,3 @@ def fetch_metadata(url):
         if not isinstance(result.get("results"), list):
             raise ValueError("官方索引格式异常")
         return result
-
-

@@ -32,4 +32,3 @@ vm.runInContext(fs.readFileSync(path.join(root,'assets/catalog.js'),'utf8'),ctx)
  assert.equal(result.search,result.searchUnion);assert.equal(result.csvLines,result.year+1);
  console.log('Filtering and CSV passed:',result);
 })().catch(e=>{console.error(e);process.exitCode=1});
-
