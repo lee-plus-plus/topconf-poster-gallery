@@ -35,3 +35,5 @@ node --check assets/app.js
 Git 跟踪页面、工具、文档和可直接使用的离线索引。_legacy/ 历史海报归档及 data/raw/ 原始缓存保留在本地，但不进入版本库；Git 不能代替这两个目录的独立备份。参考项目许可保留在 docs/，论文和海报的权利说明见 NOTICE.md。
 
 界面支持中文 / English，右上角切换并保存语言偏好。主题的中英文名称均可搜索；切换语言不改变筛选标识或论文原文。CSV 表头随界面语言切换，数据保留原始值。
+
+项目代码采用 MIT License，完整条款见 LICENSE。参考项目的版权与许可声明保留在 NOTICE.md 和 docs/REFERENCE_LICENSE.txt。论文、海报及其他第三方材料的权利归原作者或相应权利人所有，MIT License 不适用于这些材料。

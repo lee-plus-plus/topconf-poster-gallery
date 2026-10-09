@@ -1,4 +1,8 @@
-# Reference attribution
+# Copyright and attribution
+
+Original contributions to Top-Conf Poster Gallery are copyright (c) 2026 Lee and licensed under the MIT License in LICENSE.
+
+## Reference attribution
 
 Visual layout, color tokens and selected SVG icons were adapted from https://github.com/lee-plus-plus/topconf-paper-figure-gallery at revision 54e564fa3e66cb2f6bddd112a1436c95f1868b26.
 
