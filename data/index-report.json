@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-10-09T17:33:03.599796+00:00",
+  "total": 35884,
+  "file_bytes": 13750267,
+  "retained_fields": [
+    "event_id",
+    "title",
+    "authors",
+    "acceptance_type",
+    "decision_raw",
+    "directions",
+    "tags",
+    "poster_url",
+    "paper_url",
+    "conference_page"
+  ],
+  "sources": [
+    {
+      "id": "NeurIPS-2025",
+      "last_success": "2026-10-09T16:47:39.500313+00:00",
+      "fallback": false,
+      "count": 4233
+    },
+    {
+      "id": "NeurIPS-2024",
+      "last_success": "2026-10-09T16:47:37.944873+00:00",
+      "fallback": false,
+      "count": 3146
+    },
+    {
+      "id": "NeurIPS-2023",
+      "last_success": "2026-10-09T16:47:23.094421+00:00",
+      "fallback": false,
+      "count": 2733
+    },
+    {
+      "id": "NeurIPS-2022",
+      "last_success": "2026-10-09T16:47:34.902184+00:00",
+      "fallback": false,
+      "count": 2261
+    },
+    {
+      "id": "NeurIPS-2021",
+      "last_success": "2026-10-09T16:47:36.755219+00:00",
+      "fallback": false,
+      "count": 2319
+    },
+    {
+      "id": "ICML-2026",
+      "last_success": "2026-10-09T16:47:04.693937+00:00",
+      "fallback": false,
+      "count": 3153
+    },
+    {
+      "id": "ICML-2025",
+      "last_success": "2026-10-09T16:47:03.682519+00:00",
+      "fallback": false,
+      "count": 2031
+    },
+    {
+      "id": "ICML-2024",
+      "last_success": "2026-10-09T16:47:49.621398+00:00",
+      "fallback": false,
+      "count": 1938
+    },
+    {
+      "id": "ICML-2023",
+      "last_success": "2026-10-09T16:48:04.988273+00:00",
+      "fallback": false,
+      "count": 1509
+    },
+    {
+      "id": "ICML-2022",
+      "last_success": "2026-10-09T16:47:46.696202+00:00",
+      "fallback": false,
+      "count": 1072
+    },
+    {
+      "id": "ICML-2021",
+      "last_success": "2026-10-09T16:47:50.890864+00:00",
+      "fallback": false,
+      "count": 1169
+    },
+    {
+      "id": "ICLR-2026",
+      "last_success": "2026-10-09T16:47:12.478103+00:00",
+      "fallback": false,
+      "count": 3349
+    },
+    {
+      "id": "ICLR-2025",
+      "last_success": "2026-10-09T16:47:05.997937+00:00",
+      "fallback": false,
+      "count": 2546
+    },
+    {
+      "id": "ICLR-2024",
+      "last_success": "2026-10-09T16:47:55.703503+00:00",
+      "fallback": false,
+      "count": 1561
+    },
+    {
+      "id": "ICLR-2023",
+      "last_success": "2026-10-09T16:47:57.273370+00:00",
+      "fallback": false,
+      "count": 952
+    },
+    {
+      "id": "ICLR-2022",
+      "last_success": "2026-10-09T16:48:14.738077+00:00",
+      "fallback": false,
+      "count": 1056
+    },
+    {
+      "id": "ICLR-2021",
+      "last_success": "2026-10-09T16:47:59.358940+00:00",
+      "fallback": false,
+      "count": 856
+    }
+  ]
+}

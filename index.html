@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Top-Conf Poster Gallery · 顶会论文海报</title>
+  <meta name="description" content="浏览、筛选 NeurIPS、ICML、ICLR 论文海报。离线索引，原图预览。">
+  <link rel="icon" href="assets/brand.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},startup:{typeset:false}};</script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-svg.js" onload="window.dispatchEvent(new Event('mathjax-ready'))"></script>
+  <script defer src="data/index-data.js"></script>
+  <script defer src="assets/catalog.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header class="hero"><div class="hero-inner">
+    <div class="brand"><img src="assets/brand.svg" alt="" width="28" height="28"><h1>Top-Conf Poster Gallery</h1><span>顶会论文海报</span></div>
+    <button id="refresh" class="soft-button" type="button">更新</button>
+  </div></header>
+  <section class="stickbar" aria-label="论文筛选"><div class="stickbar-inner">
+    <form id="filters">
+      <div class="search-row">
+        <div class="search-box"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M21 21l-4.3-4.3M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg><input id="q" type="search" aria-label="搜索标题、作者、主题" placeholder="搜索标题、作者、主题…" autocomplete="off"></div>
+        <strong id="count" class="result-count" aria-live="polite">正在加载…</strong>
+      </div>
+      <div class="filter-row">
+        <div class="filter-field"><span>会议</span><details class="filter-menu"><summary aria-label="会议筛选"><span id="selected-venue">全部</span></summary><div class="filter-popover"><div id="facet-venue" class="choices"></div><button type="button" data-clear-group="venue">不限会议</button></div></details></div>
+        <div class="filter-field"><span>年份</span><details class="filter-menu"><summary aria-label="年份筛选"><span id="selected-year">全部</span></summary><div class="filter-popover"><div id="facet-year" class="choices"></div><button type="button" data-clear-group="year">不限年份</button></div></details></div>
+        <div class="filter-field"><span>录用</span><details class="filter-menu"><summary aria-label="录用筛选"><span id="selected-type">Oral + Spotlight</span></summary><div class="filter-popover"><div id="facet-type" class="choices"></div><button type="button" data-clear-group="type">不限录用类型</button></div></details></div>
+        <div class="filter-field"><span>主题</span><details class="filter-menu topic-menu"><summary aria-label="主题筛选"><span id="selected-topic">全部</span></summary><div class="filter-popover"><div id="facet-topic" class="choices"></div><button type="button" data-clear-group="topic">不限主题</button></div></details></div>
+        <div class="view-controls">
+          <div class="filter-field"><span>排序</span><select id="sort" aria-label="排序"><option value="relevance">相关度</option><option value="recent">年份</option><option value="oral">Oral 优先</option><option value="title">标题 A–Z</option></select></div>
+          <div class="filter-field"><span>展示</span><select id="view" aria-label="展示"><option value="combined">图像和文字</option><option value="images">仅图像</option><option value="text">仅文字</option></select></div>
+          <div class="filter-field"><span>列数</span><select id="columns" aria-label="列数"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+          <button id="clear" type="button" class="text-button">清空</button><button id="reset" type="button" class="text-button">重置</button>
+          <a id="export" href="#" download="poster_manifest.csv">CSV</a>
+        </div>
+      </div>
+    </form>
+    <div id="active" class="active-filters" aria-label="已选条件" hidden></div>
+    <div id="sync" role="status"></div>
+  </div></section>
+  <main id="cards" aria-label="海报列表"></main>
+  <section id="empty" class="empty-state" hidden><h2>暂无匹配论文</h2><button id="empty-reset" type="button" class="soft-button">重置筛选</button></section>
+  <section id="error" class="empty-state" hidden role="alert"><p></p><button id="retry" type="button" class="soft-button">重新加载</button></section>
+  <div id="load-sentinel" class="more" role="status" aria-live="polite" hidden></div>
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <button id="viewer-prev" type="button" aria-label="上一张海报"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button id="viewer-next" type="button" aria-label="下一张海报"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    <div id="viewer-stage"><img id="viewer-image" alt=""><span id="viewer-status" role="status"></span><button id="viewer-close" type="button" aria-label="关闭预览">×</button><button id="viewer-rotate" type="button" aria-label="顺时针旋转海报90度">↻</button></div>
+    <div class="viewer-meta"><p id="viewer-conference"></p><h2 id="viewer-title"></h2><p id="viewer-authors"></p><nav><a id="viewer-source" target="_blank" rel="noopener">完整海报</a><a id="viewer-paper" target="_blank" rel="noopener">论文原文</a><a id="viewer-page" target="_blank" rel="noopener">官方页面</a></nav></div>
+  </dialog>
+</body>
+</html>

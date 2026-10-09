@@ -1,0 +1,2527 @@
+{
+  "generated_at": "2026-10-09T16:52:39.512274+00:00",
+  "threshold": 0.9,
+  "denominator": "Poster records with a non-thumbnail official poster URL; institutions require every named author to have an institution",
+  "sources": [
+    {
+      "id": "NeurIPS-2025",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "base": "https://neurips.cc",
+      "url": "https://neurips.cc/static/virtual/data/neurips-2025-orals-posters.json",
+      "status": "available",
+      "poster_records": 4233,
+      "poster_events": 5858,
+      "poster_link_coverage": 0.722602,
+      "fields": {
+        "title": {
+          "present": 4233,
+          "total": 4233,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 4233,
+          "total": 4233,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 4233,
+          "total": 4233,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 4080,
+          "total": 4233,
+          "coverage": 0.963855
+        },
+        "keywords": {
+          "present": 0,
+          "total": 4233,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 4222,
+          "total": 4233,
+          "coverage": 0.997401
+        },
+        "paper_url": {
+          "present": 4213,
+          "total": 4233,
+          "coverage": 0.995275
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 4233,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 4233,
+          "total": 4233,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 3898,
+          "total": 4233,
+          "coverage": 0.92086
+        },
+        "institution_any_author": {
+          "present": 4233,
+          "total": 4233,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 4233,
+          "total": 4233,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 4221,
+          "total": 4233,
+          "coverage": 0.997165
+        },
+        "room_name": {
+          "present": 4221,
+          "total": 4233,
+          "coverage": 0.997165
+        },
+        "poster_position": {
+          "present": 4081,
+          "total": 4233,
+          "coverage": 0.964092
+        }
+      },
+      "event_field_presence": {
+        "abstract": 4233,
+        "authors": 4233,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 4222,
+        "diversity_event": 0,
+        "endtime": 4220,
+        "endtime2": 0,
+        "event_type": 4233,
+        "eventmedia": 4233,
+        "eventtype": 4233,
+        "id": 4233,
+        "keywords": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 4233,
+        "paper_pdf_url": 0,
+        "paper_url": 4213,
+        "parent1": 4221,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 4081,
+        "related_events": 50,
+        "related_events_ids": 50,
+        "room_name": 4221,
+        "schedule_html": 0,
+        "session": 4221,
+        "show_in_schedule_overview": 0,
+        "sourceid": 4233,
+        "sourceurl": 4233,
+        "starttime": 4220,
+        "starttime2": 0,
+        "topic": 4080,
+        "uid": 4233,
+        "url": 1828,
+        "virtualsite_url": 4233,
+        "visible": 4233
+      },
+      "authors_total": 24802,
+      "authors_with_institution": 24434
+    },
+    {
+      "id": "NeurIPS-2024",
+      "venue": "NeurIPS",
+      "year": 2024,
+      "base": "https://neurips.cc",
+      "url": "https://neurips.cc/static/virtual/data/neurips-2024-orals-posters.json",
+      "status": "available",
+      "poster_records": 3146,
+      "poster_events": 4538,
+      "poster_link_coverage": 0.693257,
+      "fields": {
+        "title": {
+          "present": 3146,
+          "total": 3146,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 3146,
+          "total": 3146,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 3146,
+          "total": 3146,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 2949,
+          "total": 3146,
+          "coverage": 0.937381
+        },
+        "keywords": {
+          "present": 0,
+          "total": 3146,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 3135,
+          "total": 3146,
+          "coverage": 0.996503
+        },
+        "paper_url": {
+          "present": 3119,
+          "total": 3146,
+          "coverage": 0.991418
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 3146,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 3146,
+          "total": 3146,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 2834,
+          "total": 3146,
+          "coverage": 0.900826
+        },
+        "institution_any_author": {
+          "present": 3146,
+          "total": 3146,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 3146,
+          "total": 3146,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 2927,
+          "total": 3146,
+          "coverage": 0.930388
+        },
+        "room_name": {
+          "present": 2927,
+          "total": 3146,
+          "coverage": 0.930388
+        },
+        "poster_position": {
+          "present": 2927,
+          "total": 3146,
+          "coverage": 0.930388
+        }
+      },
+      "event_field_presence": {
+        "abstract": 3146,
+        "authors": 3146,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 3135,
+        "diversity_event": 0,
+        "endtime": 2927,
+        "endtime2": 0,
+        "event_type": 3146,
+        "eventmedia": 3146,
+        "eventtype": 3146,
+        "id": 3146,
+        "keywords": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 3146,
+        "paper_pdf_url": 0,
+        "paper_url": 3119,
+        "parent1": 2927,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 2927,
+        "related_events": 46,
+        "related_events_ids": 46,
+        "room_name": 2927,
+        "schedule_html": 0,
+        "session": 2927,
+        "show_in_schedule_overview": 0,
+        "sourceid": 3146,
+        "sourceurl": 3146,
+        "starttime": 2927,
+        "starttime2": 0,
+        "topic": 2949,
+        "uid": 3146,
+        "url": 1617,
+        "virtualsite_url": 3146,
+        "visible": 3146
+      },
+      "authors_total": 17393,
+      "authors_with_institution": 17047
+    },
+    {
+      "id": "NeurIPS-2023",
+      "venue": "NeurIPS",
+      "year": 2023,
+      "base": "https://neurips.cc",
+      "url": "https://neurips.cc/static/virtual/data/neurips-2023-orals-posters.json",
+      "status": "available",
+      "poster_records": 2733,
+      "poster_events": 3584,
+      "poster_link_coverage": 0.762556,
+      "fields": {
+        "title": {
+          "present": 2733,
+          "total": 2733,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 2733,
+          "total": 2733,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 2733,
+          "total": 2733,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 2656,
+          "total": 2733,
+          "coverage": 0.971826
+        },
+        "keywords": {
+          "present": 0,
+          "total": 2733,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 2733,
+          "total": 2733,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 2718,
+          "total": 2733,
+          "coverage": 0.994512
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 2733,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 2733,
+          "total": 2733,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 2534,
+          "total": 2733,
+          "coverage": 0.927186
+        },
+        "institution_any_author": {
+          "present": 2733,
+          "total": 2733,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 2733,
+          "total": 2733,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 2707,
+          "total": 2733,
+          "coverage": 0.990487
+        },
+        "room_name": {
+          "present": 2707,
+          "total": 2733,
+          "coverage": 0.990487
+        },
+        "poster_position": {
+          "present": 2707,
+          "total": 2733,
+          "coverage": 0.990487
+        }
+      },
+      "event_field_presence": {
+        "abstract": 2733,
+        "authors": 2733,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 2733,
+        "diversity_event": 0,
+        "endtime": 2707,
+        "endtime2": 0,
+        "event_type": 2733,
+        "eventmedia": 2733,
+        "eventtype": 2733,
+        "id": 2733,
+        "keywords": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 2733,
+        "paper_pdf_url": 0,
+        "paper_url": 2718,
+        "parent1": 2707,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 2707,
+        "related_events": 46,
+        "related_events_ids": 46,
+        "room_name": 2707,
+        "schedule_html": 0,
+        "session": 2707,
+        "show_in_schedule_overview": 0,
+        "sourceid": 2733,
+        "sourceurl": 2733,
+        "starttime": 2707,
+        "starttime2": 0,
+        "topic": 2656,
+        "uid": 2733,
+        "url": 1051,
+        "virtualsite_url": 2733,
+        "visible": 2733
+      },
+      "authors_total": 13610,
+      "authors_with_institution": 13368
+    },
+    {
+      "id": "NeurIPS-2022",
+      "venue": "NeurIPS",
+      "year": 2022,
+      "base": "https://neurips.cc",
+      "url": "https://neurips.cc/static/virtual/data/neurips-2022-orals-posters.json",
+      "status": "available",
+      "poster_records": 2261,
+      "poster_events": 2905,
+      "poster_link_coverage": 0.778313,
+      "fields": {
+        "title": {
+          "present": 2261,
+          "total": 2261,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 2261,
+          "total": 2261,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 2261,
+          "total": 2261,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 2261,
+          "coverage": 0.0
+        },
+        "keywords": {
+          "present": 2073,
+          "total": 2261,
+          "coverage": 0.916851
+        },
+        "decision_raw": {
+          "present": 2204,
+          "total": 2261,
+          "coverage": 0.97479
+        },
+        "paper_url": {
+          "present": 2204,
+          "total": 2261,
+          "coverage": 0.97479
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 2261,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 2261,
+          "total": 2261,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 2025,
+          "total": 2261,
+          "coverage": 0.895621
+        },
+        "institution_any_author": {
+          "present": 2261,
+          "total": 2261,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 2261,
+          "total": 2261,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 1914,
+          "total": 2261,
+          "coverage": 0.846528
+        },
+        "room_name": {
+          "present": 0,
+          "total": 2261,
+          "coverage": 0.0
+        },
+        "poster_position": {
+          "present": 1914,
+          "total": 2261,
+          "coverage": 0.846528
+        }
+      },
+      "event_field_presence": {
+        "abstract": 2261,
+        "authors": 2261,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 2204,
+        "diversity_event": 0,
+        "endtime": 1914,
+        "endtime2": 0,
+        "eventmedia": 2261,
+        "eventtype": 2261,
+        "id": 2261,
+        "keywords": 2073,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 2261,
+        "paper_pdf_url": 0,
+        "paper_url": 2261,
+        "parent1": 1914,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 1914,
+        "related_events": 436,
+        "related_events_ids": 436,
+        "schedule_html": 0,
+        "session": 1914,
+        "show_in_schedule_overview": 0,
+        "sourceid": 2261,
+        "sourceurl": 2261,
+        "starttime": 1914,
+        "starttime2": 0,
+        "uid": 2261,
+        "url": 0,
+        "virtualsite_url": 2261,
+        "visible": 2261
+      },
+      "authors_total": 10544,
+      "authors_with_institution": 10220
+    },
+    {
+      "id": "NeurIPS-2021",
+      "venue": "NeurIPS",
+      "year": 2021,
+      "base": "https://neurips.cc",
+      "url": "https://neurips.cc/static/virtual/data/neurips-2021-orals-posters.json",
+      "status": "available",
+      "poster_records": 2319,
+      "poster_events": 2334,
+      "poster_link_coverage": 0.993573,
+      "fields": {
+        "title": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 2319,
+          "coverage": 0.0
+        },
+        "keywords": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "decision_raw": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 2307,
+          "total": 2319,
+          "coverage": 0.994825
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 2319,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 2184,
+          "total": 2319,
+          "coverage": 0.941785
+        },
+        "institution_any_author": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 2319,
+          "total": 2319,
+          "coverage": 1.0
+        },
+        "room_name": {
+          "present": 0,
+          "total": 2319,
+          "coverage": 0.0
+        },
+        "poster_position": {
+          "present": 0,
+          "total": 2319,
+          "coverage": 0.0
+        }
+      },
+      "event_field_presence": {
+        "abstract": 2319,
+        "authors": 2319,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 2319,
+        "diversity_event": 0,
+        "endtime": 2319,
+        "endtime2": 0,
+        "eventmedia": 2319,
+        "eventtype": 2319,
+        "id": 2319,
+        "keywords": 2319,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 2319,
+        "paper_pdf_url": 0,
+        "parent1": 2319,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_number": 0,
+        "related_events": 311,
+        "related_events_ids": 311,
+        "schedule_html": 0,
+        "session": 2319,
+        "show_in_schedule_overview": 0,
+        "sourceid": 2319,
+        "sourceurl": 2319,
+        "starttime": 2319,
+        "starttime2": 0,
+        "uid": 2319,
+        "url": 0,
+        "visible": 2319
+      },
+      "authors_total": 9867,
+      "authors_with_institution": 9711
+    },
+    {
+      "id": "NeurIPS-2020",
+      "venue": "NeurIPS",
+      "year": 2020,
+      "base": "https://neurips.cc",
+      "url": "https://neurips.cc/static/virtual/data/neurips-2020-orals-posters.json",
+      "status": "no_posters",
+      "poster_records": 0,
+      "poster_events": 1898,
+      "poster_link_coverage": 0.0,
+      "fields": {
+        "title": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "authors": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "abstract": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "keywords": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "decision_raw": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "paper_url": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "conference_page": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "institutions": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "institution_any_author": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "author_profile_urls": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "session": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "room_name": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "poster_position": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        }
+      },
+      "event_field_presence": {},
+      "authors_total": 0,
+      "authors_with_institution": 0
+    },
+    {
+      "id": "ICML-2026",
+      "venue": "ICML",
+      "year": 2026,
+      "base": "https://icml.cc",
+      "url": "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json",
+      "status": "available",
+      "poster_records": 3153,
+      "poster_events": 6628,
+      "poster_link_coverage": 0.475709,
+      "fields": {
+        "title": {
+          "present": 3153,
+          "total": 3153,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 3153,
+          "total": 3153,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 0,
+          "total": 3153,
+          "coverage": 0.0
+        },
+        "official_topic": {
+          "present": 3047,
+          "total": 3153,
+          "coverage": 0.966381
+        },
+        "keywords": {
+          "present": 0,
+          "total": 3153,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 3117,
+          "total": 3153,
+          "coverage": 0.988582
+        },
+        "paper_url": {
+          "present": 3151,
+          "total": 3153,
+          "coverage": 0.999366
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 3153,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 3153,
+          "total": 3153,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 2831,
+          "total": 3153,
+          "coverage": 0.897875
+        },
+        "institution_any_author": {
+          "present": 3151,
+          "total": 3153,
+          "coverage": 0.999366
+        },
+        "author_profile_urls": {
+          "present": 3153,
+          "total": 3153,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 2948,
+          "total": 3153,
+          "coverage": 0.934983
+        },
+        "room_name": {
+          "present": 2950,
+          "total": 3153,
+          "coverage": 0.935617
+        },
+        "poster_position": {
+          "present": 2950,
+          "total": 3153,
+          "coverage": 0.935617
+        }
+      },
+      "event_field_presence": {
+        "authors": 3153,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 3117,
+        "diversity_event": 0,
+        "endtime": 2950,
+        "event_type": 3153,
+        "eventmedia": 3153,
+        "eventtype": 3153,
+        "id": 3153,
+        "keywords": 0,
+        "name": 3153,
+        "paper_pdf_url": 0,
+        "paper_url": 3114,
+        "parent": 2948,
+        "parent_id": 2948,
+        "poster_position": 2950,
+        "related_events": 69,
+        "related_events_ids": 69,
+        "room_name": 2950,
+        "session": 2948,
+        "show_in_schedule_overview": 0,
+        "sourceid": 3117,
+        "sourceurl": 3153,
+        "starttime": 2950,
+        "topic": 3047,
+        "uid": 3117,
+        "url": 1441,
+        "virtualsite_url": 3153,
+        "visible": 3153
+      },
+      "authors_total": 17842,
+      "authors_with_institution": 17470
+    },
+    {
+      "id": "ICML-2025",
+      "venue": "ICML",
+      "year": 2025,
+      "base": "https://icml.cc",
+      "url": "https://icml.cc/static/virtual/data/icml-2025-orals-posters.json",
+      "status": "available",
+      "poster_records": 2031,
+      "poster_events": 3339,
+      "poster_link_coverage": 0.608266,
+      "fields": {
+        "title": {
+          "present": 2031,
+          "total": 2031,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 2031,
+          "total": 2031,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 2031,
+          "total": 2031,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 2030,
+          "total": 2031,
+          "coverage": 0.999508
+        },
+        "keywords": {
+          "present": 0,
+          "total": 2031,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 2031,
+          "total": 2031,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 2026,
+          "total": 2031,
+          "coverage": 0.997538
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 2031,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 2031,
+          "total": 2031,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 1795,
+          "total": 2031,
+          "coverage": 0.883801
+        },
+        "institution_any_author": {
+          "present": 2031,
+          "total": 2031,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 2031,
+          "total": 2031,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 2020,
+          "total": 2031,
+          "coverage": 0.994584
+        },
+        "room_name": {
+          "present": 2020,
+          "total": 2031,
+          "coverage": 0.994584
+        },
+        "poster_position": {
+          "present": 2020,
+          "total": 2031,
+          "coverage": 0.994584
+        }
+      },
+      "event_field_presence": {
+        "abstract": 2031,
+        "authors": 2031,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 2031,
+        "diversity_event": 0,
+        "endtime": 2020,
+        "endtime2": 0,
+        "event_type": 2031,
+        "eventmedia": 2031,
+        "eventtype": 2031,
+        "id": 2031,
+        "keywords": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 2031,
+        "paper_pdf_url": 0,
+        "paper_url": 2026,
+        "parent1": 2020,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 2020,
+        "related_events": 61,
+        "related_events_ids": 61,
+        "room_name": 2020,
+        "schedule_html": 0,
+        "session": 2020,
+        "show_in_schedule_overview": 0,
+        "sourceid": 2031,
+        "sourceurl": 2031,
+        "starttime": 2020,
+        "starttime2": 0,
+        "topic": 2030,
+        "uid": 2031,
+        "url": 660,
+        "virtualsite_url": 2031,
+        "visible": 2031
+      },
+      "authors_total": 10746,
+      "authors_with_institution": 10486
+    },
+    {
+      "id": "ICML-2024",
+      "venue": "ICML",
+      "year": 2024,
+      "base": "https://icml.cc",
+      "url": "https://icml.cc/static/virtual/data/icml-2024-orals-posters.json",
+      "status": "available",
+      "poster_records": 1938,
+      "poster_events": 2634,
+      "poster_link_coverage": 0.735763,
+      "fields": {
+        "title": {
+          "present": 1938,
+          "total": 1938,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 1938,
+          "total": 1938,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 1938,
+          "total": 1938,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 1832,
+          "total": 1938,
+          "coverage": 0.945304
+        },
+        "keywords": {
+          "present": 0,
+          "total": 1938,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 1938,
+          "total": 1938,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 1922,
+          "total": 1938,
+          "coverage": 0.991744
+        },
+        "paper_pdf_url": {
+          "present": 1922,
+          "total": 1938,
+          "coverage": 0.991744
+        },
+        "conference_page": {
+          "present": 1938,
+          "total": 1938,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 1749,
+          "total": 1938,
+          "coverage": 0.902477
+        },
+        "institution_any_author": {
+          "present": 1937,
+          "total": 1938,
+          "coverage": 0.999484
+        },
+        "author_profile_urls": {
+          "present": 1938,
+          "total": 1938,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 1933,
+          "total": 1938,
+          "coverage": 0.99742
+        },
+        "room_name": {
+          "present": 1933,
+          "total": 1938,
+          "coverage": 0.99742
+        },
+        "poster_position": {
+          "present": 1933,
+          "total": 1938,
+          "coverage": 0.99742
+        }
+      },
+      "event_field_presence": {
+        "abstract": 1938,
+        "authors": 1938,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 1938,
+        "diversity_event": 0,
+        "endtime": 1933,
+        "endtime2": 0,
+        "event_type": 1938,
+        "eventmedia": 1938,
+        "eventtype": 1938,
+        "id": 1938,
+        "keywords": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 1938,
+        "paper_pdf_url": 1922,
+        "paper_url": 0,
+        "parent1": 1933,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 1933,
+        "related_events": 98,
+        "related_events_ids": 98,
+        "room_name": 1933,
+        "schedule_html": 0,
+        "session": 1933,
+        "show_in_schedule_overview": 0,
+        "sourceid": 1938,
+        "sourceurl": 1938,
+        "starttime": 1933,
+        "starttime2": 0,
+        "topic": 1832,
+        "uid": 1938,
+        "url": 780,
+        "virtualsite_url": 1938,
+        "visible": 1938
+      },
+      "authors_total": 9617,
+      "authors_with_institution": 9387
+    },
+    {
+      "id": "ICML-2023",
+      "venue": "ICML",
+      "year": 2023,
+      "base": "https://icml.cc",
+      "url": "https://icml.cc/static/virtual/data/icml-2023-orals-posters.json",
+      "status": "available",
+      "poster_records": 1509,
+      "poster_events": 1865,
+      "poster_link_coverage": 0.809115,
+      "fields": {
+        "title": {
+          "present": 1509,
+          "total": 1509,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 1509,
+          "total": 1509,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 1509,
+          "total": 1509,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 1509,
+          "coverage": 0.0
+        },
+        "keywords": {
+          "present": 0,
+          "total": 1509,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 1509,
+          "total": 1509,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 1479,
+          "total": 1509,
+          "coverage": 0.980119
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 1509,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 1509,
+          "total": 1509,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 1315,
+          "total": 1509,
+          "coverage": 0.871438
+        },
+        "institution_any_author": {
+          "present": 1509,
+          "total": 1509,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 1509,
+          "total": 1509,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 1507,
+          "total": 1509,
+          "coverage": 0.998675
+        },
+        "room_name": {
+          "present": 1507,
+          "total": 1509,
+          "coverage": 0.998675
+        },
+        "poster_position": {
+          "present": 1507,
+          "total": 1509,
+          "coverage": 0.998675
+        }
+      },
+      "event_field_presence": {
+        "abstract": 1509,
+        "authors": 1509,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 1509,
+        "diversity_event": 0,
+        "endtime": 1507,
+        "endtime2": 0,
+        "eventmedia": 1509,
+        "eventtype": 1509,
+        "id": 1509,
+        "keywords": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 1509,
+        "paper_pdf_url": 0,
+        "paper_url": 0,
+        "parent1": 1507,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 1507,
+        "related_events": 127,
+        "related_events_ids": 127,
+        "room_name": 1507,
+        "schedule_html": 0,
+        "session": 1507,
+        "show_in_schedule_overview": 0,
+        "sourceid": 1509,
+        "sourceurl": 1509,
+        "starttime": 1507,
+        "starttime2": 0,
+        "type_display_name": 1509,
+        "uid": 1509,
+        "url": 251,
+        "virtualsite_url": 1509,
+        "visible": 1509
+      },
+      "authors_total": 6731,
+      "authors_with_institution": 6497
+    },
+    {
+      "id": "ICML-2022",
+      "venue": "ICML",
+      "year": 2022,
+      "base": "https://icml.cc",
+      "url": "https://icml.cc/static/virtual/data/icml-2022-orals-posters.json",
+      "status": "available",
+      "poster_records": 1072,
+      "poster_events": 1233,
+      "poster_link_coverage": 0.869424,
+      "fields": {
+        "title": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 1071,
+          "total": 1072,
+          "coverage": 0.999067
+        },
+        "abstract": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 1072,
+          "coverage": 0.0
+        },
+        "keywords": {
+          "present": 1068,
+          "total": 1072,
+          "coverage": 0.996269
+        },
+        "decision_raw": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 1072,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 1042,
+          "total": 1072,
+          "coverage": 0.972015
+        },
+        "institution_any_author": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        },
+        "room_name": {
+          "present": 0,
+          "total": 1072,
+          "coverage": 0.0
+        },
+        "poster_position": {
+          "present": 1072,
+          "total": 1072,
+          "coverage": 1.0
+        }
+      },
+      "event_field_presence": {
+        "abstract": 1072,
+        "authors": 1072,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 1072,
+        "diversity_event": 0,
+        "endtime": 1072,
+        "endtime2": 0,
+        "eventmedia": 1072,
+        "eventtype": 1072,
+        "id": 1072,
+        "keywords": 1068,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 1072,
+        "paper_pdf_url": 0,
+        "paper_url": 1072,
+        "parent1": 1072,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 1072,
+        "related_events": 1072,
+        "related_events_ids": 1072,
+        "schedule_html": 0,
+        "session": 1072,
+        "show_in_schedule_overview": 0,
+        "sourceid": 1072,
+        "sourceurl": 1072,
+        "starttime": 1072,
+        "starttime2": 0,
+        "uid": 1072,
+        "url": 0,
+        "virtualsite_url": 1072,
+        "visible": 1072
+      },
+      "authors_total": 4699,
+      "authors_with_institution": 4668
+    },
+    {
+      "id": "ICML-2021",
+      "venue": "ICML",
+      "year": 2021,
+      "base": "https://icml.cc",
+      "url": "https://icml.cc/static/virtual/data/icml-2021-orals-posters.json",
+      "status": "available",
+      "poster_records": 1169,
+      "poster_events": 1183,
+      "poster_link_coverage": 0.988166,
+      "fields": {
+        "title": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 1169,
+          "coverage": 0.0
+        },
+        "keywords": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "decision_raw": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "paper_pdf_url": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "conference_page": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 1155,
+          "total": 1169,
+          "coverage": 0.988024
+        },
+        "institution_any_author": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 1169,
+          "total": 1169,
+          "coverage": 1.0
+        },
+        "room_name": {
+          "present": 0,
+          "total": 1169,
+          "coverage": 0.0
+        },
+        "poster_position": {
+          "present": 0,
+          "total": 1169,
+          "coverage": 0.0
+        }
+      },
+      "event_field_presence": {
+        "abstract": 1169,
+        "authors": 1169,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 1169,
+        "diversity_event": 0,
+        "endtime": 1169,
+        "endtime2": 0,
+        "eventmedia": 1169,
+        "eventtype": 1169,
+        "id": 1169,
+        "keywords": 1169,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 1169,
+        "paper_pdf_url": 1169,
+        "parent1": 1169,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_number": 0,
+        "related_events": 1169,
+        "related_events_ids": 1169,
+        "schedule_html": 0,
+        "session": 1169,
+        "show_in_schedule_overview": 0,
+        "sourceid": 1169,
+        "sourceurl": 0,
+        "starttime": 1169,
+        "starttime2": 0,
+        "uid": 1169,
+        "url": 0,
+        "visible": 1169
+      },
+      "authors_total": 4787,
+      "authors_with_institution": 4773
+    },
+    {
+      "id": "ICML-2020",
+      "venue": "ICML",
+      "year": 2020,
+      "base": "https://icml.cc",
+      "url": "https://icml.cc/static/virtual/data/icml-2020-orals-posters.json",
+      "status": "no_posters",
+      "poster_records": 0,
+      "poster_events": 1084,
+      "poster_link_coverage": 0.0,
+      "fields": {
+        "title": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "authors": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "abstract": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "keywords": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "decision_raw": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "paper_url": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "conference_page": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "institutions": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "institution_any_author": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "author_profile_urls": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "session": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "room_name": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "poster_position": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        }
+      },
+      "event_field_presence": {},
+      "authors_total": 0,
+      "authors_with_institution": 0
+    },
+    {
+      "id": "ICLR-2026",
+      "venue": "ICLR",
+      "year": 2026,
+      "base": "https://iclr.cc",
+      "url": "https://iclr.cc/static/virtual/data/iclr-2026-orals-posters.json",
+      "status": "available",
+      "poster_records": 3349,
+      "poster_events": 5468,
+      "poster_link_coverage": 0.612473,
+      "fields": {
+        "title": {
+          "present": 3349,
+          "total": 3349,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 3348,
+          "total": 3349,
+          "coverage": 0.999701
+        },
+        "abstract": {
+          "present": 0,
+          "total": 3349,
+          "coverage": 0.0
+        },
+        "official_topic": {
+          "present": 3099,
+          "total": 3349,
+          "coverage": 0.925351
+        },
+        "keywords": {
+          "present": 0,
+          "total": 3349,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 3349,
+          "total": 3349,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 3331,
+          "total": 3349,
+          "coverage": 0.994625
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 3349,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 3349,
+          "total": 3349,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 3012,
+          "total": 3349,
+          "coverage": 0.899373
+        },
+        "institution_any_author": {
+          "present": 3348,
+          "total": 3349,
+          "coverage": 0.999701
+        },
+        "author_profile_urls": {
+          "present": 3349,
+          "total": 3349,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 3326,
+          "total": 3349,
+          "coverage": 0.993132
+        },
+        "room_name": {
+          "present": 3326,
+          "total": 3349,
+          "coverage": 0.993132
+        },
+        "poster_position": {
+          "present": 3326,
+          "total": 3349,
+          "coverage": 0.993132
+        }
+      },
+      "event_field_presence": {
+        "authors": 3349,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 3349,
+        "diversity_event": 0,
+        "endtime": 3326,
+        "event_type": 3349,
+        "eventmedia": 3349,
+        "eventtype": 3349,
+        "id": 3349,
+        "keywords": 0,
+        "name": 3349,
+        "paper_pdf_url": 0,
+        "paper_url": 3331,
+        "parent": 3326,
+        "parent_id": 3326,
+        "poster_position": 3326,
+        "related_events": 111,
+        "related_events_ids": 111,
+        "room_name": 3326,
+        "session": 3326,
+        "show_in_schedule_overview": 0,
+        "sourceid": 3349,
+        "sourceurl": 3349,
+        "starttime": 3326,
+        "topic": 3099,
+        "uid": 3349,
+        "url": 1727,
+        "virtualsite_url": 3349,
+        "visible": 3349
+      },
+      "authors_total": 20737,
+      "authors_with_institution": 20360
+    },
+    {
+      "id": "ICLR-2025",
+      "venue": "ICLR",
+      "year": 2025,
+      "base": "https://iclr.cc",
+      "url": "https://iclr.cc/static/virtual/data/iclr-2025-orals-posters.json",
+      "status": "available",
+      "poster_records": 2546,
+      "poster_events": 3827,
+      "poster_link_coverage": 0.665273,
+      "fields": {
+        "title": {
+          "present": 2546,
+          "total": 2546,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 2546,
+          "total": 2546,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 2546,
+          "total": 2546,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 2387,
+          "total": 2546,
+          "coverage": 0.937549
+        },
+        "keywords": {
+          "present": 0,
+          "total": 2546,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 2546,
+          "total": 2546,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 2506,
+          "total": 2546,
+          "coverage": 0.984289
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 2546,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 2546,
+          "total": 2546,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 2266,
+          "total": 2546,
+          "coverage": 0.890024
+        },
+        "institution_any_author": {
+          "present": 2545,
+          "total": 2546,
+          "coverage": 0.999607
+        },
+        "author_profile_urls": {
+          "present": 2546,
+          "total": 2546,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 2532,
+          "total": 2546,
+          "coverage": 0.994501
+        },
+        "room_name": {
+          "present": 2532,
+          "total": 2546,
+          "coverage": 0.994501
+        },
+        "poster_position": {
+          "present": 2532,
+          "total": 2546,
+          "coverage": 0.994501
+        }
+      },
+      "event_field_presence": {
+        "abstract": 2546,
+        "authors": 2546,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 2546,
+        "diversity_event": 0,
+        "endtime": 2532,
+        "endtime2": 0,
+        "event_type": 2546,
+        "eventmedia": 2546,
+        "eventtype": 2546,
+        "id": 2546,
+        "keywords": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 2546,
+        "paper_pdf_url": 0,
+        "paper_url": 2506,
+        "parent1": 2532,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 2532,
+        "related_events": 126,
+        "related_events_ids": 126,
+        "room_name": 2532,
+        "schedule_html": 0,
+        "session": 2532,
+        "show_in_schedule_overview": 0,
+        "sourceid": 2546,
+        "sourceurl": 2546,
+        "starttime": 2532,
+        "starttime2": 0,
+        "topic": 2387,
+        "uid": 2546,
+        "url": 1385,
+        "virtualsite_url": 2546,
+        "visible": 2546
+      },
+      "authors_total": 14312,
+      "authors_with_institution": 14005
+    },
+    {
+      "id": "ICLR-2024",
+      "venue": "ICLR",
+      "year": 2024,
+      "base": "https://iclr.cc",
+      "url": "https://iclr.cc/static/virtual/data/iclr-2024-orals-posters.json",
+      "status": "available",
+      "poster_records": 1561,
+      "poster_events": 2296,
+      "poster_link_coverage": 0.679878,
+      "fields": {
+        "title": {
+          "present": 1561,
+          "total": 1561,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 1561,
+          "total": 1561,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 1552,
+          "total": 1561,
+          "coverage": 0.994234
+        },
+        "official_topic": {
+          "present": 1451,
+          "total": 1561,
+          "coverage": 0.929532
+        },
+        "keywords": {
+          "present": 0,
+          "total": 1561,
+          "coverage": 0.0
+        },
+        "decision_raw": {
+          "present": 1561,
+          "total": 1561,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 1546,
+          "total": 1561,
+          "coverage": 0.990391
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 1561,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 1561,
+          "total": 1561,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 1394,
+          "total": 1561,
+          "coverage": 0.893017
+        },
+        "institution_any_author": {
+          "present": 1561,
+          "total": 1561,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 1561,
+          "total": 1561,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 1557,
+          "total": 1561,
+          "coverage": 0.997438
+        },
+        "room_name": {
+          "present": 1557,
+          "total": 1561,
+          "coverage": 0.997438
+        },
+        "poster_position": {
+          "present": 1557,
+          "total": 1561,
+          "coverage": 0.997438
+        }
+      },
+      "event_field_presence": {
+        "abstract": 1552,
+        "authors": 1561,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 1561,
+        "diversity_event": 0,
+        "endtime": 1557,
+        "endtime2": 0,
+        "event_type": 1561,
+        "eventmedia": 1561,
+        "eventtype": 1561,
+        "id": 1561,
+        "keywords": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 1561,
+        "paper_pdf_url": 0,
+        "paper_url": 1546,
+        "parent1": 1557,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 1557,
+        "related_events": 56,
+        "related_events_ids": 56,
+        "room_name": 1557,
+        "schedule_html": 0,
+        "session": 1557,
+        "show_in_schedule_overview": 0,
+        "sourceid": 1561,
+        "sourceurl": 1561,
+        "starttime": 1557,
+        "starttime2": 0,
+        "topic": 1451,
+        "uid": 1561,
+        "url": 742,
+        "virtualsite_url": 1561,
+        "visible": 1561
+      },
+      "authors_total": 8214,
+      "authors_with_institution": 8029
+    },
+    {
+      "id": "ICLR-2023",
+      "venue": "ICLR",
+      "year": 2023,
+      "base": "https://iclr.cc",
+      "url": "https://iclr.cc/static/virtual/data/iclr-2023-orals-posters.json",
+      "status": "available",
+      "poster_records": 952,
+      "poster_events": 1584,
+      "poster_link_coverage": 0.60101,
+      "fields": {
+        "title": {
+          "present": 952,
+          "total": 952,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 952,
+          "total": 952,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 952,
+          "total": 952,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 952,
+          "coverage": 0.0
+        },
+        "keywords": {
+          "present": 947,
+          "total": 952,
+          "coverage": 0.994748
+        },
+        "decision_raw": {
+          "present": 952,
+          "total": 952,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 948,
+          "total": 952,
+          "coverage": 0.995798
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 952,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 952,
+          "total": 952,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 851,
+          "total": 952,
+          "coverage": 0.893908
+        },
+        "institution_any_author": {
+          "present": 952,
+          "total": 952,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 952,
+          "total": 952,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 541,
+          "total": 952,
+          "coverage": 0.568277
+        },
+        "room_name": {
+          "present": 543,
+          "total": 952,
+          "coverage": 0.570378
+        },
+        "poster_position": {
+          "present": 541,
+          "total": 952,
+          "coverage": 0.568277
+        }
+      },
+      "event_field_presence": {
+        "abstract": 952,
+        "authors": 952,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 952,
+        "diversity_event": 0,
+        "endtime": 541,
+        "endtime2": 0,
+        "eventmedia": 952,
+        "eventtype": 952,
+        "id": 952,
+        "keywords": 947,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 952,
+        "paper_pdf_url": 0,
+        "paper_url": 948,
+        "parent1": 541,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 541,
+        "related_events": 154,
+        "related_events_ids": 154,
+        "room_name": 543,
+        "schedule_html": 0,
+        "session": 541,
+        "show_in_schedule_overview": 0,
+        "sourceid": 952,
+        "sourceurl": 952,
+        "starttime": 541,
+        "starttime2": 0,
+        "type_display_name": 952,
+        "uid": 952,
+        "url": 82,
+        "virtualsite_url": 952,
+        "visible": 952
+      },
+      "authors_total": 4520,
+      "authors_with_institution": 4407
+    },
+    {
+      "id": "ICLR-2022",
+      "venue": "ICLR",
+      "year": 2022,
+      "base": "https://iclr.cc",
+      "url": "https://iclr.cc/static/virtual/data/iclr-2022-orals-posters.json",
+      "status": "available",
+      "poster_records": 1056,
+      "poster_events": 1095,
+      "poster_link_coverage": 0.964384,
+      "fields": {
+        "title": {
+          "present": 1056,
+          "total": 1056,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 1055,
+          "total": 1056,
+          "coverage": 0.999053
+        },
+        "abstract": {
+          "present": 1056,
+          "total": 1056,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 1056,
+          "coverage": 0.0
+        },
+        "keywords": {
+          "present": 854,
+          "total": 1056,
+          "coverage": 0.808712
+        },
+        "decision_raw": {
+          "present": 1056,
+          "total": 1056,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 1056,
+          "total": 1056,
+          "coverage": 1.0
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 1056,
+          "coverage": 0.0
+        },
+        "conference_page": {
+          "present": 1056,
+          "total": 1056,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 885,
+          "total": 1056,
+          "coverage": 0.838068
+        },
+        "institution_any_author": {
+          "present": 1056,
+          "total": 1056,
+          "coverage": 1.0
+        },
+        "author_profile_urls": {
+          "present": 1056,
+          "total": 1056,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 1056,
+          "total": 1056,
+          "coverage": 1.0
+        },
+        "room_name": {
+          "present": 0,
+          "total": 1056,
+          "coverage": 0.0
+        },
+        "poster_position": {
+          "present": 0,
+          "total": 1056,
+          "coverage": 0.0
+        }
+      },
+      "event_field_presence": {
+        "abstract": 1056,
+        "authors": 1056,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 1056,
+        "diversity_event": 0,
+        "endtime": 1056,
+        "endtime2": 0,
+        "eventmedia": 1056,
+        "eventtype": 1056,
+        "id": 1056,
+        "keywords": 854,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 1056,
+        "paper_pdf_url": 0,
+        "parent1": 1056,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_position": 0,
+        "related_events": 221,
+        "related_events_ids": 221,
+        "schedule_html": 0,
+        "session": 1056,
+        "show_in_schedule_overview": 0,
+        "sourceid": 1056,
+        "sourceurl": 1056,
+        "starttime": 1056,
+        "starttime2": 0,
+        "uid": 1056,
+        "url": 0,
+        "visible": 1056
+      },
+      "authors_total": 4932,
+      "authors_with_institution": 4723
+    },
+    {
+      "id": "ICLR-2021",
+      "venue": "ICLR",
+      "year": 2021,
+      "base": "https://iclr.cc",
+      "url": "https://iclr.cc/static/virtual/data/iclr-2021-orals-posters.json",
+      "status": "available",
+      "poster_records": 856,
+      "poster_events": 860,
+      "poster_link_coverage": 0.995349,
+      "fields": {
+        "title": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "authors": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "abstract": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 856,
+          "coverage": 0.0
+        },
+        "keywords": {
+          "present": 800,
+          "total": 856,
+          "coverage": 0.934579
+        },
+        "decision_raw": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "paper_url": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "paper_pdf_url": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "conference_page": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "institutions": {
+          "present": 671,
+          "total": 856,
+          "coverage": 0.783879
+        },
+        "institution_any_author": {
+          "present": 855,
+          "total": 856,
+          "coverage": 0.998832
+        },
+        "author_profile_urls": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "session": {
+          "present": 856,
+          "total": 856,
+          "coverage": 1.0
+        },
+        "room_name": {
+          "present": 0,
+          "total": 856,
+          "coverage": 0.0
+        },
+        "poster_position": {
+          "present": 0,
+          "total": 856,
+          "coverage": 0.0
+        }
+      },
+      "event_field_presence": {
+        "abstract": 856,
+        "authors": 856,
+        "children": 0,
+        "children_ids": 0,
+        "children_url": 0,
+        "decision": 856,
+        "diversity_event": 0,
+        "endtime": 856,
+        "endtime2": 0,
+        "eventmedia": 856,
+        "eventtype": 856,
+        "id": 856,
+        "keywords": 800,
+        "latitude": 0,
+        "longitude": 0,
+        "name": 856,
+        "paper_pdf_url": 856,
+        "parent1": 856,
+        "parent2": 0,
+        "parent2_id": 0,
+        "poster_number": 0,
+        "related_events": 166,
+        "related_events_ids": 166,
+        "schedule_html": 0,
+        "session": 856,
+        "show_in_schedule_overview": 0,
+        "sourceid": 856,
+        "sourceurl": 0,
+        "starttime": 856,
+        "starttime2": 0,
+        "uid": 856,
+        "url": 0,
+        "visible": 856
+      },
+      "authors_total": 3818,
+      "authors_with_institution": 3539
+    },
+    {
+      "id": "ICLR-2020",
+      "venue": "ICLR",
+      "year": 2020,
+      "base": "https://iclr.cc",
+      "url": "https://iclr.cc/static/virtual/data/iclr-2020-orals-posters.json",
+      "status": "no_posters",
+      "poster_records": 0,
+      "poster_events": 687,
+      "poster_link_coverage": 0.0,
+      "fields": {
+        "title": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "authors": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "abstract": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "official_topic": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "keywords": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "decision_raw": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "paper_url": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "paper_pdf_url": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "conference_page": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "institutions": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "institution_any_author": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "author_profile_urls": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "session": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "room_name": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        },
+        "poster_position": {
+          "present": 0,
+          "total": 0,
+          "coverage": 0
+        }
+      },
+      "event_field_presence": {},
+      "authors_total": 0,
+      "authors_with_institution": 0
+    }
+  ],
+  "common_fields": {
+    "title": {
+      "minimum_source_coverage": 1.0,
+      "overall_coverage": 1.0,
+      "eligible": true
+    },
+    "authors": {
+      "minimum_source_coverage": 0.999053,
+      "overall_coverage": 0.999916,
+      "eligible": true
+    },
+    "abstract": {
+      "minimum_source_coverage": 0.0,
+      "overall_coverage": 0.818554,
+      "eligible": false
+    },
+    "official_topic": {
+      "minimum_source_coverage": 0.0,
+      "overall_coverage": 0.655752,
+      "eligible": false
+    },
+    "keywords": {
+      "minimum_source_coverage": 0.0,
+      "overall_coverage": 0.257218,
+      "eligible": false
+    },
+    "decision_raw": {
+      "minimum_source_coverage": 0.97479,
+      "overall_coverage": 0.996795,
+      "eligible": true
+    },
+    "paper_url": {
+      "minimum_source_coverage": 0.97479,
+      "overall_coverage": 0.992727,
+      "eligible": true
+    },
+    "paper_pdf_url": {
+      "minimum_source_coverage": 0.0,
+      "overall_coverage": 0.109993,
+      "eligible": false
+    },
+    "conference_page": {
+      "minimum_source_coverage": 1.0,
+      "overall_coverage": 1.0,
+      "eligible": true
+    },
+    "institutions": {
+      "minimum_source_coverage": 0.783879,
+      "overall_coverage": 0.904052,
+      "eligible": false
+    },
+    "institution_any_author": {
+      "minimum_source_coverage": 0.998832,
+      "overall_coverage": 0.999833,
+      "eligible": false,
+      "reliability_reason": "Diagnostic only; institutions requires all named authors"
+    },
+    "author_profile_urls": {
+      "minimum_source_coverage": 1.0,
+      "overall_coverage": 1.0,
+      "eligible": false,
+      "reliability_reason": "Internal API routes, including testserver; not reliable public researcher profiles"
+    },
+    "session": {
+      "minimum_source_coverage": 0.568277,
+      "overall_coverage": 0.964357,
+      "eligible": false
+    },
+    "room_name": {
+      "minimum_source_coverage": 0.0,
+      "overall_coverage": 0.730771,
+      "eligible": false
+    },
+    "poster_position": {
+      "minimum_source_coverage": 0.0,
+      "overall_coverage": 0.810027,
+      "eligible": false
+    }
+  }
+}

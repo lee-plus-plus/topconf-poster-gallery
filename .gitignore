@@ -1,0 +1,21 @@
+_legacy/
+__pycache__/
+*.pyc
+node_modules/
+*.tmp
+
+data/raw/
+
+# Local environments, downloaded media and temporary output
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.log
+*.part
+downloads/
+outputs/
+.env
+.env.*
+!.env.example

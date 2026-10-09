@@ -1,0 +1,121 @@
+[
+  {
+    "id": "NeurIPS-2025",
+    "venue": "NeurIPS",
+    "year": 2025,
+    "base": "https://neurips.cc",
+    "url": "https://neurips.cc/static/virtual/data/neurips-2025-orals-posters.json"
+  },
+  {
+    "id": "NeurIPS-2024",
+    "venue": "NeurIPS",
+    "year": 2024,
+    "base": "https://neurips.cc",
+    "url": "https://neurips.cc/static/virtual/data/neurips-2024-orals-posters.json"
+  },
+  {
+    "id": "NeurIPS-2023",
+    "venue": "NeurIPS",
+    "year": 2023,
+    "base": "https://neurips.cc",
+    "url": "https://neurips.cc/static/virtual/data/neurips-2023-orals-posters.json"
+  },
+  {
+    "id": "NeurIPS-2022",
+    "venue": "NeurIPS",
+    "year": 2022,
+    "base": "https://neurips.cc",
+    "url": "https://neurips.cc/static/virtual/data/neurips-2022-orals-posters.json"
+  },
+  {
+    "id": "NeurIPS-2021",
+    "venue": "NeurIPS",
+    "year": 2021,
+    "base": "https://neurips.cc",
+    "url": "https://neurips.cc/static/virtual/data/neurips-2021-orals-posters.json"
+  },
+  {
+    "id": "ICML-2026",
+    "venue": "ICML",
+    "year": 2026,
+    "base": "https://icml.cc",
+    "url": "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json"
+  },
+  {
+    "id": "ICML-2025",
+    "venue": "ICML",
+    "year": 2025,
+    "base": "https://icml.cc",
+    "url": "https://icml.cc/static/virtual/data/icml-2025-orals-posters.json"
+  },
+  {
+    "id": "ICML-2024",
+    "venue": "ICML",
+    "year": 2024,
+    "base": "https://icml.cc",
+    "url": "https://icml.cc/static/virtual/data/icml-2024-orals-posters.json"
+  },
+  {
+    "id": "ICML-2023",
+    "venue": "ICML",
+    "year": 2023,
+    "base": "https://icml.cc",
+    "url": "https://icml.cc/static/virtual/data/icml-2023-orals-posters.json"
+  },
+  {
+    "id": "ICML-2022",
+    "venue": "ICML",
+    "year": 2022,
+    "base": "https://icml.cc",
+    "url": "https://icml.cc/static/virtual/data/icml-2022-orals-posters.json"
+  },
+  {
+    "id": "ICML-2021",
+    "venue": "ICML",
+    "year": 2021,
+    "base": "https://icml.cc",
+    "url": "https://icml.cc/static/virtual/data/icml-2021-orals-posters.json"
+  },
+  {
+    "id": "ICLR-2026",
+    "venue": "ICLR",
+    "year": 2026,
+    "base": "https://iclr.cc",
+    "url": "https://iclr.cc/static/virtual/data/iclr-2026-orals-posters.json"
+  },
+  {
+    "id": "ICLR-2025",
+    "venue": "ICLR",
+    "year": 2025,
+    "base": "https://iclr.cc",
+    "url": "https://iclr.cc/static/virtual/data/iclr-2025-orals-posters.json"
+  },
+  {
+    "id": "ICLR-2024",
+    "venue": "ICLR",
+    "year": 2024,
+    "base": "https://iclr.cc",
+    "url": "https://iclr.cc/static/virtual/data/iclr-2024-orals-posters.json"
+  },
+  {
+    "id": "ICLR-2023",
+    "venue": "ICLR",
+    "year": 2023,
+    "base": "https://iclr.cc",
+    "url": "https://iclr.cc/static/virtual/data/iclr-2023-orals-posters.json"
+  },
+  {
+    "id": "ICLR-2022",
+    "venue": "ICLR",
+    "year": 2022,
+    "base": "https://iclr.cc",
+    "url": "https://iclr.cc/static/virtual/data/iclr-2022-orals-posters.json"
+  },
+  {
+    "id": "ICLR-2021",
+    "venue": "ICLR",
+    "year": 2021,
+    "base": "https://iclr.cc",
+    "url": "https://iclr.cc/static/virtual/data/iclr-2021-orals-posters.json"
+  }
+]
