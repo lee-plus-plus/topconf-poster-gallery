@@ -1,39 +1,97 @@
 # Top-Conf Poster Gallery
 
-顶会海报静态画廊。双击根目录 index.html 即可浏览、筛选和导出 CSV，无需启动服务。
+### 顶会论文海报画廊 · NeurIPS · ICML · ICLR · 2021–2026
 
-assets/ 是页面样式与交互；data/ 是官方海报元数据索引；scripts/ 是索引更新工具；docs/ 是维护说明和参考项目许可；_legacy/ 是原有 300 张海报、清单、旧页面及历史脚本，新页面不依赖它。
+Browse conference posters to explore research and find ideas for your own poster's layout, figures, and narrative.
 
-扩展索引共 35,884 条有完整海报链接的记录，覆盖 NeurIPS 2021–2025、ICML 2021–2026、ICLR 2021–2026，共 17 届；默认 Oral / Spotlight 共 5,987 条。该数值不代表会议全部论文的海报覆盖率。
+浏览顶会论文海报，寻找研究线索，参考版式、图文组织与论述方式。
 
-筛选和导出在浏览器本地完成；海报从官方源按需加载，需要网络。MathJax 和自动旋转识别组件使用 CDN。点击“更新”刷新官方元数据，失败时保留已有索引。
+![Posters](https://img.shields.io/badge/posters-35%2C884-4f46e5)
+![Conferences](https://img.shields.io/badge/conferences-NeurIPS%20%C2%B7%20ICML%20%C2%B7%20ICLR-6366f1)
+![Static site](https://img.shields.io/badge/site-static-64748b)
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/LICENSE)
 
-界面参考 https://github.com/lee-plus-plus/topconf-paper-figure-gallery 。参见 NOTICE.md。
+[Download ZIP / 下载](https://github.com/lee-plus-plus/topconf-poster-gallery/archive/refs/heads/main.zip) · [English](#english) · [中文](#中文) · [Coverage / 数据覆盖](#coverage--数据覆盖) · [Report an issue / 反馈](https://github.com/lee-plus-plus/topconf-poster-gallery/issues)
 
-维护：python scripts/build_index.py 更新索引；python scripts/validate.py 校验目录和索引。python scripts/preview.py 提供可选调试预览。
-筛选逻辑回归检查：node scripts/validate_catalog.cjs。界面检查记录见 docs/DESIGN_QA.md。
-展示统一采用瀑布流，可选图像和文字、仅图像、仅文字。主题筛选统一包含研究方向和细分主题，以分割线区分，两组可混合多选。默认两列，可选 2–5 列；手机端自适应单列。仅文字模式首次加载不请求海报图片。
+## English
 
-字段以每届 90% 为门槛。详细覆盖率与排除原因见 docs/SOURCE_AUDIT.md。先运行 python scripts/audit_sources.py，再运行 python scripts/build_index.py 重建索引。
+A searchable gallery of **35,884 paper posters** from 17 editions of NeurIPS, ICML, and ICLR. Each entry connects the poster with its paper, authors, conference, year, and acceptance type. Use it to compare how papers present their motivation, methods, and results—or to browse work in a research area.
 
-重新抓取公开官方元数据：python scripts/audit_sources.py --refresh；然后运行 python scripts/build_index.py。浏览器刷新遇到核心字段完整度低于 90% 时保留已有索引。
+- **Find relevant papers.** Filter by conference, year, acceptance type, and topic. Search titles, authors, and topic labels; combine filters across categories.
+- **Browse visually.** Choose images and text, images only, or text only. The masonry gallery supports 2–5 columns on desktop, incremental scrolling, full-size previews, and manual rotation.
+- **Build a reading list.** Follow links to the paper and official conference page, or export all matching entries to CSV.
+- **Switch languages.** Chinese and English controls and topic labels, with your preference saved locally. Paper titles and author names stay in their original form.
+- **Open without setup.** A static site with a bundled metadata index. No account, backend, or build step. Poster images load from official conference sources as you browse.
 
-无限滚动，首次加载及每次追加最多 24 条；剩余约 8 条时自动预加载下一批，变更筛选或排序重新加载。CSV 导出仍包含所有匹配记录。
+The default selection shows **5,987 Oral / Spotlight entries**. Clear the acceptance filter to include regular Posters. Topic labels emphasize semi-supervised, weakly supervised, and unsupervised learning; LLM applications; and robust and trustworthy machine learning.
 
-浏览器使用 IndexedDB 缓存近期海报原图，最多 64 张且总量不超过 192 MiB，超限优先淘汰最久未访问的图片。刷新和预览优先读取本地缓存；跨域限制或浏览器存储不可用时回退到原图链接。仅文字模式不请求图片。
+## 中文
 
-批量采集说明：三家会议当前 robots.txt 禁止自动抓取 /static，元数据更新接口位于该路径。已有离线索引可正常浏览；重新批量抓取前应核对站点规则并确认访问许可。图片 /media 路径未被通用规则禁止，不代表不限量下载许可。
+收录 NeurIPS、ICML、ICLR 共 17 届会议的 **35,884 张论文海报**，将海报与论文原文、作者、会议、年份和录用类型关联起来。既可以按研究方向找论文，也可以对照不同海报，学习如何组织研究动机、方法和实验结果。
 
-本地开发使用 Python 3.8+ 和 Node.js，无需额外依赖。验证：
+- **快速筛选**：按会议、年份、录用类型和主题组合筛选，支持搜索标题、作者及中英文主题标签。
+- **专注看图**：图像和文字、仅图像、仅文字三种展示方式；桌面支持 2–5 列瀑布流、滚动加载、大图预览与手动旋转。
+- **整理清单**：直接访问论文原文和会议页面，将全部筛选结果导出为 CSV。
+- **中英文切换**：界面与主题标签支持双语，自动保存语言偏好，论文标题与作者保留原文。
+- **下载即用**：纯静态网页，内置论文索引，无需安装依赖或启动后端；浏览时按需加载官方海报图片。
 
-```text
-python -B scripts/validate.py
-node scripts/validate_catalog.cjs
-node --check assets/app.js
+默认展示 **5,987 条 Oral / Spotlight 记录**，清空录用条件即可浏览普通 Poster。预定义主题重点覆盖半监督、弱监督与无监督学习，LLM 应用，以及鲁棒可信机器学习。
+
+## Get started / 开始使用
+
+1. [Download the repository / 下载仓库](https://github.com/lee-plus-plus/topconf-poster-gallery/archive/refs/heads/main.zip) and unzip it.
+2. Open `index.html` in a modern browser. 解压后，用现代浏览器打开 `index.html`。
+3. Select filters and start browsing. 选择筛选条件，点击海报查看大图。
+
+Or clone the repository / 也可以直接克隆：
+
+```bash
+git clone https://github.com/lee-plus-plus/topconf-poster-gallery.git
 ```
 
-Git 跟踪页面、工具、文档和可直接使用的离线索引。_legacy/ 历史海报归档及 data/raw/ 原始缓存保留在本地，但不进入版本库；Git 不能代替这两个目录的独立备份。参考项目许可保留在 docs/，论文和海报的权利说明见 NOTICE.md。
+The bundled index supports offline search and filtering. Uncached posters, math rendering, and automatic orientation detection require network access. Recently viewed images may be reused from browser storage.
 
-界面支持中文 / English，右上角切换并保存语言偏好。主题的中英文名称均可搜索；切换语言不改变筛选标识或论文原文。CSV 表头随界面语言切换，数据保留原始值。
+内置索引支持离线搜索和筛选；未缓存的海报、数学公式渲染组件和自动方向识别组件需要网络。近期浏览的图片可通过浏览器缓存复用。
 
-项目代码采用 MIT License，完整条款见 LICENSE。参考项目的版权与许可声明保留在 NOTICE.md 和 docs/REFERENCE_LICENSE.txt。论文、海报及其他第三方材料的权利归原作者或相应权利人所有，MIT License 不适用于这些材料。
+## Coverage / 数据覆盖
+
+Metadata snapshot / 索引快照：**2026-10-09**
+
+| Conference / 会议 | Years / 年份 | Editions / 届数 | Posters / 海报条目 |
+| --- | --- | ---: | ---: |
+| NeurIPS | 2021–2025 | 5 | 14,692 |
+| ICML | 2021–2026 | 6 | 10,872 |
+| ICLR | 2021–2026 | 6 | 10,320 |
+| **Total / 合计** | | **17** | **35,884** |
+
+Counts refer to indexed records with official poster-image links, not all accepted papers or a guarantee that every image remains available. The repository contains metadata and links; it does not bundle the full poster collection.
+
+数量指具有官方海报图片链接的索引条目，不代表会议全部录用论文，也不保证所有远程图片始终可用。仓库提供元数据与链接，不打包全部海报图片。
+
+## Data and topics / 数据与主题
+
+Conference metadata comes from official sources. Acceptance labels are normalized for filtering: ICLR 2023's `notable-top-5%` / `notable-top-25%` map to Oral / Spotlight; ICML 2022's Long / Short Presentation use the same mapping. Original decision text is preserved.
+
+会议元数据来自官方源。录用标签经过统一：ICLR 2023 的 `notable-top-5%` / `notable-top-25%`、ICML 2022 的 Long / Short Presentation 分别映射为 Oral / Spotlight，同时保留原始录用字段。
+
+Topics are assigned by keyword rules over titles and available source keywords and topics. They support discovery, but have not been manually verified. Papers remain in the gallery even when no topic matches. Acceptance types and topic labels are not measures of citation impact.
+
+主题由标题及来源中可用的关键词、官方主题进行规则匹配，未经逐篇人工核验，可能漏标或误标。未命中主题的论文仍然收录。录用类型与主题标签不代表引用影响力评价。
+
+[Source coverage and field audit / 来源覆盖与字段审计](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/SOURCE_AUDIT.md) · [Maintenance guide / 维护指南](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/MAINTENANCE.md)
+
+## Contributing / 参与完善
+
+Found a broken poster link, incorrect metadata, or a misleading topic label? [Open an issue](https://github.com/lee-plus-plus/topconf-poster-gallery/issues) with the paper title, conference/year, source URL, and suggested correction. Contributions to source coverage, filtering, and translations are welcome.
+
+如果发现海报链接失效、论文信息错误或主题标注不准确，欢迎提交 Issue，并附上论文标题、会议年份、来源链接及建议修改。也欢迎补充数据源、改进筛选和翻译。
+
+## Acknowledgments and license / 致谢与许可
+
+Inspired by [Top-Conf Figure Gallery](https://github.com/qwdwqfwq/topconf-paper-figure-gallery). The interface adapts visual elements from [lee-plus-plus/topconf-paper-figure-gallery](https://github.com/lee-plus-plus/topconf-paper-figure-gallery); its original license and attribution are preserved.
+
+项目参考 Top-Conf Figure Gallery 的画廊组织方式，界面沿用上述参考仓库的部分视觉设计，保留原项目许可与署名。
+
+Code is licensed under the [MIT License](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/LICENSE). Posters, papers, logos, and other third-party materials belong to their respective rights holders and are not covered by the code license. See [NOTICE](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/NOTICE.md).
+
+代码采用 MIT License。海报、论文、标识及其他第三方材料的权利归各自权利人所有，不适用本项目的代码许可。版权或署名问题可通过 Issue 联系维护者。

@@ -8,8 +8,40 @@ python scripts/audit_sources.py 审计候选来源和原始缓存，缺少缓存
 
 图像按需加载。离线时仍可筛选索引，但未缓存图像无法显示。方向识别低置信度时保留原图，也可手动旋转。
 
-公开部署只发布 index.html、assets/、data/；不要上传 _legacy。目前未执行远程发布。
+静态网站部署只需 index.html、assets/ 和发布用 data/ 文件；不要上传 _legacy/ 或 data/raw/。源代码已同步到 GitHub，网站托管需单独配置。
 
 重新抓取公开官方元数据：python scripts/audit_sources.py --refresh；然后运行 python scripts/build_index.py。浏览器刷新遇到核心字段完整度低于 90% 时保留已有索引。
 
 批量采集说明：三家会议当前 robots.txt 禁止自动抓取 /static，元数据更新接口位于该路径。已有离线索引可正常浏览；重新批量抓取前应核对站点规则并确认访问许可。图片 /media 路径未被通用规则禁止，不代表不限量下载许可。
+
+## 本地开发与校验
+
+浏览页面无需安装依赖。运行维护工具需要 Python 3.8+；筛选回归检查需要 Node.js。
+
+```text
+python -B scripts/validate.py
+node scripts/validate_catalog.cjs
+node --check assets/app.js
+node --check assets/catalog.js
+node --check assets/i18n.js
+```
+
+可选本地预览：`python scripts/preview.py`，随后打开 `http://127.0.0.1:8876/`。首次使用仓库时，直接打开根目录的 `index.html` 也可浏览。
+
+## 文件组织与本地归档
+
+- `assets/`：界面、筛选交互、翻译与图片缓存。
+- `data/index-data.js`：浏览器直接读取的离线索引。
+- `data/sources.json`：会议来源配置。
+- `scripts/`：来源审计、索引构建和校验工具。
+- `docs/`：来源审计说明、维护指南及参考项目许可。
+- `_legacy/`：原有 300 张本地海报及历史清单，仅在维护者本地保留，不进入 Git。
+- `data/raw/`：来源原始缓存，不进入 Git；新克隆的仓库不包含它，重建索引前需要准备原始缓存并重新审计。
+
+Git 只备份已跟踪文件；本地归档与原始缓存需要单独备份。
+
+## 图片缓存与加载
+
+首次展示及每次追加最多 24 条记录。仅文字模式首次加载不请求海报图片；CSV 导出包含全部匹配记录，不受当前已展示数量限制。
+
+浏览器通过 IndexedDB 缓存近期海报原图，最多 64 张、合计不超过 192 MiB；单张超过 32 MiB 时不写入该缓存。空间超限时淘汰最久未访问的图片。浏览器存储或跨域读取不可用时，回退到原图链接。浏览器可能自行清理缓存，缓存不能代替本地归档。
