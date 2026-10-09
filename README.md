@@ -1,21 +1,38 @@
-# Top-Conf Poster Gallery
+<h1 align="center">Top-Conf Poster Gallery</h1>
 
-### 顶会论文海报画廊 · NeurIPS · ICML · ICLR · 2021–2026
+<h3 align="center">顶会论文海报画廊 · NeurIPS · ICML · ICLR · 2021–2026</h3>
 
-Browse conference posters to explore research and find ideas for your own poster's layout, figures, and narrative.
+<p align="center">
+  <strong>从历年顶会海报中寻找设计灵感，通过阅读海报快速了解近年研究成果，<br>基于海报数据库探索 AI4Science 研究。</strong>
+</p>
 
-浏览顶会论文海报，寻找研究线索，参考版式、图文组织与论述方式。
+<p align="center">
+  Find design inspiration in conference posters, explore recent research at a glance,<br>
+  and use the poster collection as a starting point for AI4Science research.
+</p>
 
-![Posters](https://img.shields.io/badge/posters-35%2C884-4f46e5)
-![Conferences](https://img.shields.io/badge/conferences-NeurIPS%20%C2%B7%20ICML%20%C2%B7%20ICLR-6366f1)
-![Static site](https://img.shields.io/badge/site-static-64748b)
-[![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/LICENSE)
+<p align="center">
+  <img src="https://img.shields.io/badge/posters-35%2C884-4f46e5" alt="35,884 posters">
+  <img src="https://img.shields.io/badge/conferences-NeurIPS%20%C2%B7%20ICML%20%C2%B7%20ICLR-6366f1" alt="NeurIPS, ICML and ICLR">
+  <img src="https://img.shields.io/badge/site-static-64748b" alt="Static site">
+  <a href="https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"></a>
+</p>
 
-**[Open the gallery / 在线浏览](https://lee-plus-plus.github.io/topconf-poster-gallery/)** · [English](#english) · [中文](#中文) · [Coverage / 数据覆盖](#coverage--数据覆盖) · [Report an issue / 反馈](https://github.com/lee-plus-plus/topconf-poster-gallery/issues)
+<p align="center">
+  <strong><a href="https://lee-plus-plus.github.io/topconf-poster-gallery/">Open the gallery / 在线浏览 →</a></strong>
+</p>
 
-[![Gallery overview: Chinese interface with conference filters and poster cards](https://raw.githubusercontent.com/lee-plus-plus/topconf-poster-gallery/main/docs/images/gallery-overview.jpg)](https://lee-plus-plus.github.io/topconf-poster-gallery/)
+<p align="center">
+  <a href="#english">English</a> · <a href="#中文">中文</a> · <a href="#coverage--数据覆盖">Coverage / 数据覆盖</a> · <a href="https://github.com/lee-plus-plus/topconf-poster-gallery/issues">Report an issue / 反馈</a>
+</p>
 
-*Browse, filter, and compare posters in one place. / 在同一页面浏览、筛选与对照海报。*
+<p align="center">
+  <a href="https://lee-plus-plus.github.io/topconf-poster-gallery/">
+    <img src="https://raw.githubusercontent.com/lee-plus-plus/topconf-poster-gallery/main/docs/images/gallery-overview.jpg" alt="Four-column poster gallery with conference, year, acceptance and topic filters" width="100%">
+  </a>
+</p>
+
+<p align="center"><em>Four columns of posters, ready to explore. / 四列海报瀑布流，一屏浏览更多研究。</em></p>
 
 ## English
 
@@ -23,6 +40,7 @@ A searchable gallery of **35,884 paper posters** from 17 editions of NeurIPS, IC
 
 - **Find relevant papers.** Filter by conference, year, acceptance type, and topic. Search titles, authors, and topic labels; combine filters across categories.
 - **Browse visually.** Choose images and text, images only, or text only. The masonry gallery supports 2–5 columns on desktop, incremental scrolling, full-size previews, and manual rotation.
+- **Explore AI4Science.** Use the metadata and source links to assemble research collections for scientific-document understanding, multimodal retrieval, and automatic poster generation.
 - **Build a reading list.** Follow links to the paper and official conference page, or export all matching entries to CSV.
 - **Switch languages.** Chinese and English controls and topic labels, with your preference saved locally. Paper titles and author names stay in their original form.
 - **Visit and browse.** [Open the online gallery](https://lee-plus-plus.github.io/topconf-poster-gallery/) in your browser. No account or installation required; poster images load from official conference sources as you browse.
@@ -35,6 +53,7 @@ The default selection shows **5,987 Oral / Spotlight entries**. Clear the accept
 
 - **快速筛选**：按会议、年份、录用类型和主题组合筛选，支持搜索标题、作者及中英文主题标签。
 - **专注看图**：图像和文字、仅图像、仅文字三种展示方式；桌面支持 2–5 列瀑布流、滚动加载、大图预览与手动旋转。
+- **探索 AI4Science**：利用海报元数据与来源链接组织研究材料，探索科学文档理解、多模态检索与海报自动生成等任务。
 - **整理清单**：直接访问论文原文和会议页面，将全部筛选结果导出为 CSV。
 - **中英文切换**：界面与主题标签支持双语，自动保存语言偏好，论文标题与作者保留原文。
 - **打开即用**：[访问在线画廊](https://lee-plus-plus.github.io/topconf-poster-gallery/)，无需注册或安装；浏览时按需加载官方海报图片。
