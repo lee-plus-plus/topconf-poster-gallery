@@ -11,7 +11,11 @@ Browse conference posters to explore research and find ideas for your own poster
 ![Static site](https://img.shields.io/badge/site-static-64748b)
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/LICENSE)
 
-[Download ZIP / 下载](https://github.com/lee-plus-plus/topconf-poster-gallery/archive/refs/heads/main.zip) · [English](#english) · [中文](#中文) · [Coverage / 数据覆盖](#coverage--数据覆盖) · [Report an issue / 反馈](https://github.com/lee-plus-plus/topconf-poster-gallery/issues)
+**[Open the gallery / 在线浏览](https://lee-plus-plus.github.io/topconf-poster-gallery/)** · [English](#english) · [中文](#中文) · [Coverage / 数据覆盖](#coverage--数据覆盖) · [Report an issue / 反馈](https://github.com/lee-plus-plus/topconf-poster-gallery/issues)
+
+[![Gallery overview: Chinese interface with conference filters and poster cards](https://raw.githubusercontent.com/lee-plus-plus/topconf-poster-gallery/main/docs/images/gallery-overview.jpg)](https://lee-plus-plus.github.io/topconf-poster-gallery/)
+
+*Browse, filter, and compare posters in one place. / 在同一页面浏览、筛选与对照海报。*
 
 ## English
 
@@ -21,7 +25,7 @@ A searchable gallery of **35,884 paper posters** from 17 editions of NeurIPS, IC
 - **Browse visually.** Choose images and text, images only, or text only. The masonry gallery supports 2–5 columns on desktop, incremental scrolling, full-size previews, and manual rotation.
 - **Build a reading list.** Follow links to the paper and official conference page, or export all matching entries to CSV.
 - **Switch languages.** Chinese and English controls and topic labels, with your preference saved locally. Paper titles and author names stay in their original form.
-- **Open without setup.** A static site with a bundled metadata index. No account, backend, or build step. Poster images load from official conference sources as you browse.
+- **Visit and browse.** [Open the online gallery](https://lee-plus-plus.github.io/topconf-poster-gallery/) in your browser. No account or installation required; poster images load from official conference sources as you browse.
 
 The default selection shows **5,987 Oral / Spotlight entries**. Clear the acceptance filter to include regular Posters. Topic labels emphasize semi-supervised, weakly supervised, and unsupervised learning; LLM applications; and robust and trustworthy machine learning.
 
@@ -33,25 +37,25 @@ The default selection shows **5,987 Oral / Spotlight entries**. Clear the accept
 - **专注看图**：图像和文字、仅图像、仅文字三种展示方式；桌面支持 2–5 列瀑布流、滚动加载、大图预览与手动旋转。
 - **整理清单**：直接访问论文原文和会议页面，将全部筛选结果导出为 CSV。
 - **中英文切换**：界面与主题标签支持双语，自动保存语言偏好，论文标题与作者保留原文。
-- **下载即用**：纯静态网页，内置论文索引，无需安装依赖或启动后端；浏览时按需加载官方海报图片。
+- **打开即用**：[访问在线画廊](https://lee-plus-plus.github.io/topconf-poster-gallery/)，无需注册或安装；浏览时按需加载官方海报图片。
 
 默认展示 **5,987 条 Oral / Spotlight 记录**，清空录用条件即可浏览普通 Poster。预定义主题重点覆盖半监督、弱监督与无监督学习，LLM 应用，以及鲁棒可信机器学习。
 
-## Get started / 开始使用
+## Start browsing / 开始浏览
 
-1. [Download the repository / 下载仓库](https://github.com/lee-plus-plus/topconf-poster-gallery/archive/refs/heads/main.zip) and unzip it.
-2. Open `index.html` in a modern browser. 解压后，用现代浏览器打开 `index.html`。
-3. Select filters and start browsing. 选择筛选条件，点击海报查看大图。
+### [lee-plus-plus.github.io/topconf-poster-gallery →](https://lee-plus-plus.github.io/topconf-poster-gallery/)
 
-Or clone the repository / 也可以直接克隆：
+1. **Find papers.** Search a title, author, or topic; narrow the results by conference, year, and acceptance type. 搜索标题、作者或主题，再按会议、年份和录用类型缩小范围。
+2. **Explore posters.** Choose your view and column count, then click a poster for a full-size preview. 选择展示方式和列数，点击海报查看大图。
+3. **Keep references.** Open the paper or official page, or export the matching records to CSV. 访问论文和官方页面，或导出筛选清单。
 
-```bash
-git clone https://github.com/lee-plus-plus/topconf-poster-gallery.git
-```
+Switch between English and Chinese at the top right. Images may take a moment to load from conference websites; recently viewed posters can be reused from browser storage.
 
-The bundled index supports offline search and filtering. Uncached posters, math rendering, and automatic orientation detection require network access. Recently viewed images may be reused from browser storage.
+右上角可切换中英文。海报从会议网站加载，首次打开可能需要等待；近期浏览过的图片可通过浏览器缓存复用。
 
-内置索引支持离线搜索和筛选；未缓存的海报、数学公式渲染组件和自动方向识别组件需要网络。近期浏览的图片可通过浏览器缓存复用。
+![Full-size poster preview with paper links and rotation controls](https://raw.githubusercontent.com/lee-plus-plus/topconf-poster-gallery/main/docs/images/poster-preview.jpg)
+
+*Inspect the poster and follow its source links without leaving the gallery. / 在画廊中查看海报细节，并访问论文与官方来源。*
 
 ## Coverage / 数据覆盖
 
