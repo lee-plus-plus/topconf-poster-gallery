@@ -101,7 +101,7 @@ Topics are assigned by keyword rules over titles and available source keywords a
 
 主题由标题及来源中可用的关键词、官方主题进行规则匹配，未经逐篇人工核验，可能漏标或误标。未命中主题的论文仍然收录。录用类型与主题标签不代表引用影响力评价。
 
-[Source coverage and field audit / 来源覆盖与字段审计](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/SOURCE_AUDIT.md) · [Maintenance guide / 维护指南](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/MAINTENANCE.md)
+[CSV fields and research use / CSV 字段与研究使用](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/DATA_SCHEMA.md) · [Source coverage and field audit / 来源覆盖与字段审计](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/SOURCE_AUDIT.md) · [Maintenance guide / 维护指南](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/MAINTENANCE.md)
 
 ## Contributing / 参与完善
 

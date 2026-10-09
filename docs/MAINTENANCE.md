@@ -21,7 +21,9 @@ python scripts/audit_sources.py 审计候选来源和原始缓存，缺少缓存
 ```text
 python -B scripts/validate.py
 node scripts/validate_catalog.cjs
+node scripts/validate_reliability.cjs
 node --check assets/app.js
+node --check assets/images.js
 node --check assets/catalog.js
 node --check assets/i18n.js
 ```
@@ -45,3 +47,5 @@ Git 只备份已跟踪文件；本地归档与原始缓存需要单独备份。
 首次展示及每次追加最多 24 条记录。仅文字模式首次加载不请求海报图片；CSV 导出包含全部匹配记录，不受当前已展示数量限制。
 
 浏览器通过 IndexedDB 缓存近期海报原图，最多 64 张、合计不超过 192 MiB；单张超过 32 MiB 时不写入该缓存。空间超限时淘汰最久未访问的图片。浏览器存储或跨域读取不可用时，回退到原图链接。浏览器可能自行清理缓存，缓存不能代替本地归档。
+
+图片加载并发上限为 6；每个已启动任务最多等待 30 秒（包含缓存读取、网络请求及原生图片回退）。切换筛选或关闭预览会取消相应任务；等待图片不超过 8 张时可预加载下一批，避免单张慢图阻塞，也限制待加载积压。CSV 的字段与版本含义见 DATA_SCHEMA.md。
