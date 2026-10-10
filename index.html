@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Top-Conf Poster Gallery · 顶会论文海报</title>
+  <title>Top-Conf Poster Gallery · 顶会论文海报画廊</title>
   <meta name="description" content="浏览、筛选 NeurIPS、ICML、ICLR 论文海报。离线索引，原图预览。">
   <link rel="icon" href="assets/brand.svg">
   <link rel="stylesheet" href="assets/style.css">
@@ -17,8 +17,8 @@
 </head>
 <body>
   <header class="hero"><div class="hero-inner">
-    <div class="brand"><img src="assets/brand.svg" alt="" width="28" height="28"><h1>Top-Conf Poster Gallery</h1><span>顶会论文海报</span></div>
-    <div class="header-actions"><a class="soft-button repository-link" href="https://github.com/lee-plus-plus/topconf-poster-gallery" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button id="language" class="soft-button" type="button" aria-label="切换为英文">English</button><button id="refresh" class="soft-button" type="button" hidden>更新</button></div>
+    <div class="brand"><img src="assets/brand.svg" alt="" width="28" height="28"><h1>Top-Conf Poster Gallery</h1><span>顶会论文海报画廊</span></div>
+    <div class="header-actions"><a class="soft-button repository-link" href="https://lee-plus-plus.github.io/topconf-paper-figure-gallery/" target="_blank" rel="noopener noreferrer">友链 ↗</a><a class="soft-button repository-link" href="https://github.com/lee-plus-plus/topconf-poster-gallery" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button id="language" class="soft-button" type="button" aria-label="切换为英文">English</button><button id="refresh" class="soft-button" type="button" hidden>更新</button></div>
   </div></header>
   <section class="stickbar" aria-label="论文筛选"><div class="stickbar-inner">
     <form id="filters">
@@ -36,7 +36,6 @@
           <div class="filter-field"><span>展示</span><select id="view" aria-label="展示"><option value="combined">图像和文字</option><option value="images">仅图像</option><option value="text">仅文字</option></select></div>
           <div class="filter-field"><span>列数</span><select id="columns" aria-label="列数"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
           <button id="clear" type="button" class="text-button">清空</button><button id="reset" type="button" class="text-button">重置</button>
-          <a id="export" href="#" download="poster_manifest.csv">CSV</a>
         </div>
       </div>
     </form>

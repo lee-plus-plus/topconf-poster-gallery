@@ -41,7 +41,7 @@ A searchable gallery of **35,884 paper posters** from 17 editions of NeurIPS, IC
 - **Find relevant papers.** Filter by conference, year, acceptance type, and topic. Search titles, authors, and topic labels; combine filters across categories.
 - **Browse visually.** Choose images and text, images only, or text only. The masonry gallery supports 2–5 columns on desktop, incremental scrolling, full-size previews, and manual rotation.
 - **Explore AI4Science.** Use the metadata and source links to assemble research collections for scientific-document understanding, multimodal retrieval, and automatic poster generation.
-- **Build a reading list.** Follow links to the paper and official conference page, or export all matching entries to CSV.
+- **Build a reading list.** Follow links to the paper and official conference page.
 - **Switch languages.** Chinese and English controls and topic labels, with your preference saved locally. Paper titles and author names stay in their original form.
 - **Visit and browse.** [Open the online gallery](https://lee-plus-plus.github.io/topconf-poster-gallery/) in your browser. No account or installation required; poster images load from official conference sources as you browse.
 
@@ -54,7 +54,7 @@ The default selection shows **5,987 Oral / Spotlight entries**. Clear the accept
 - **快速筛选**：按会议、年份、录用类型和主题组合筛选，支持搜索标题、作者及中英文主题标签。
 - **专注看图**：图像和文字、仅图像、仅文字三种展示方式；桌面支持 2–5 列瀑布流、滚动加载、大图预览与手动旋转。
 - **探索 AI4Science**：利用海报元数据与来源链接组织研究材料，探索科学文档理解、多模态检索与海报自动生成等任务。
-- **整理清单**：直接访问论文原文和会议页面，将全部筛选结果导出为 CSV。
+- **整理清单**：直接访问论文原文和会议页面。
 - **中英文切换**：界面与主题标签支持双语，自动保存语言偏好，论文标题与作者保留原文。
 - **打开即用**：[访问在线画廊](https://lee-plus-plus.github.io/topconf-poster-gallery/)，无需注册或安装；浏览时按需加载官方海报图片。
 
@@ -66,7 +66,7 @@ The default selection shows **5,987 Oral / Spotlight entries**. Clear the accept
 
 1. **Find papers.** Search a title, author, or topic; narrow the results by conference, year, and acceptance type. 搜索标题、作者或主题，再按会议、年份和录用类型缩小范围。
 2. **Explore posters.** Choose your view and column count, then click a poster for a full-size preview. 选择展示方式和列数，点击海报查看大图。
-3. **Keep references.** Open the paper or official page, or export the matching records to CSV. 访问论文和官方页面，或导出筛选清单。
+3. **Keep references.** Open the paper or official page. 访问论文原文和官方页面。
 
 Switch between English and Chinese at the top right. Images may take a moment to load from conference websites; recently viewed posters can be reused from browser storage.
 

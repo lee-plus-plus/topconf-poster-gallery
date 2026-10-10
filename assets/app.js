@@ -133,7 +133,6 @@ let loadAheadFrame;
 new ResizeObserver(()=>{cancelAnimationFrame(loadAheadFrame);loadAheadFrame=requestAnimationFrame(observeLoadAhead);}).observe($('cards'));
 $('retry').addEventListener('click',()=>refreshCatalog(true));
 $('refresh').addEventListener('click',()=>refreshCatalog(true));
-$('export').addEventListener('click',event=>{event.preventDefault();const url=URL.createObjectURL(catalog.exportCSV(state));const a=document.createElement('a');a.href=url;a.download='poster_manifest.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 window.addEventListener('popstate',()=>{state=fromURL(new URLSearchParams(location.search));reflect();load(true);});
 
 
