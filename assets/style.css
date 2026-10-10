@@ -47,3 +47,6 @@ dialog[open]{display:flex;flex-direction:column;overflow:visible}
 @media(prefers-reduced-motion:reduce){#load-sentinel.is-loading::before{animation:none}}
 
 .header-actions{display:flex;align-items:center;gap:8px;flex:none}html[lang=en] .topic-menu .filter-popover{width:min(380px,calc(100vw - 32px))}
+
+.repository-link{display:inline-flex;align-items:center;white-space:nowrap;border:1px solid #d9d4eb;border-radius:7px;padding:6px 10px}.repository-link:hover{text-decoration:none;border-color:#b9addd}
+@media(max-width:600px){.hero-inner{flex-wrap:wrap}.header-actions{margin-left:auto}}
