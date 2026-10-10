@@ -118,7 +118,6 @@ for(const key of ['q'])$(key).addEventListener('input',()=>{state[key]=$(key).va
 for(const key of ['sort'])$(key).addEventListener('change',()=>{state[key]=$(key).value;changed();});
 function reset(){state={...defaults(),view:state.view,columns:state.columns};reflect();changed();}
 $('reset').addEventListener('click',reset);$('empty-reset').addEventListener('click',reset);
-$('clear').addEventListener('click',()=>{state={...defaults(),type:[],view:state.view,columns:state.columns};reflect();changed();});
 for(const key of ['view','columns'])$(key).addEventListener('change',()=>{state[key]=$(key).value;applyView();store('poster-filter-last',state);syncURL('push');});
 const loadMoreObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)&&hasMore&&!busy)load(false);});
 function observeLoadAhead(){
