@@ -10,6 +10,9 @@
   <script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},startup:{typeset:false}};</script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-svg.js" onload="window.dispatchEvent(new Event('mathjax-ready'))"></script>
   <script defer src="data/index-data.js"></script>
+  <script defer src="data/image-metadata.js"></script>
+  <script defer src="data/layout-data.js"></script>
+  <script defer src="data/shape-data.js"></script>
   <script defer src="assets/i18n.js"></script>
   <script defer src="assets/catalog.js"></script>
   <script defer src="assets/images.js"></script>
@@ -31,10 +34,13 @@
         <div class="filter-field"><span>年份</span><details class="filter-menu"><summary aria-label="年份筛选"><span id="selected-year">全部</span></summary><div class="filter-popover"><div id="facet-year" class="choices"></div><button type="button" data-clear-group="year">不限年份</button></div></details></div>
         <div class="filter-field"><span>录用</span><details class="filter-menu"><summary aria-label="录用筛选"><span id="selected-type">Oral + Spotlight</span></summary><div class="filter-popover"><div id="facet-type" class="choices"></div><button type="button" data-clear-group="type">不限录用类型</button></div></details></div>
         <div class="filter-field"><span>主题</span><details class="filter-menu topic-menu"><summary aria-label="主题筛选"><span id="selected-topic">全部</span></summary><div class="filter-popover"><div id="facet-topic" class="choices"></div><button type="button" data-clear-group="topic">不限主题</button></div></details></div>
+        <div class="filter-field"><span>排版列数</span><details class="filter-menu"><summary aria-label="排版列数筛选"><span id="selected-layout">全部</span></summary><div class="filter-popover"><div id="facet-layout" class="choices"></div><button type="button" data-clear-group="layout">不限排版列数</button></div></details></div>
+        <div class="filter-field"><span>形状</span><details class="filter-menu"><summary aria-label="形状筛选"><span id="selected-shape">全部</span></summary><div class="filter-popover"><div id="facet-shape" class="choices"></div><button type="button" data-clear-group="shape">不限形状</button></div></details></div>
+        <div class="filter-field color-field"><span>关键色</span><div id="color-picker" class="pickr-host" aria-label="选择强调色"></div></div>
         <div class="view-controls">
-          <div class="filter-field"><span>排序</span><select id="sort" aria-label="排序"><option value="relevance">相关度</option><option value="recent">年份</option><option value="oral">Oral 优先</option><option value="title">标题 A–Z</option></select></div>
+          <div class="filter-field"><span>排序</span><select id="sort" aria-label="排序"><option value="relevance">相关度最高</option><option value="recent">年份最新</option><option value="oral">Oral 优先</option></select></div>
           <div class="filter-field"><span>展示</span><select id="view" aria-label="展示"><option value="combined">图像和文字</option><option value="images">仅图像</option><option value="text">仅文字</option></select></div>
-          <div class="filter-field"><span>列数</span><select id="columns" aria-label="列数"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+          <div class="filter-field columns-control"><span>列数</span><select id="columns" aria-label="列数"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
           <button id="reset" type="button" class="text-button">重置</button>
         </div>
       </div>
@@ -48,7 +54,7 @@
   <div id="load-sentinel" class="more" role="status" aria-live="polite" hidden></div>
   <dialog id="viewer" aria-labelledby="viewer-title">
     <button id="viewer-prev" type="button" aria-label="上一张海报"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button id="viewer-next" type="button" aria-label="下一张海报"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
-    <div id="viewer-stage"><img id="viewer-image" alt=""><span id="viewer-status" role="status"></span><button id="viewer-close" type="button" aria-label="关闭预览">×</button><button id="viewer-rotate" type="button" aria-label="顺时针旋转海报90度">↻</button></div>
+    <div id="viewer-stage"><img id="viewer-image" alt=""><span id="viewer-status" role="status"></span><button id="viewer-close" type="button" aria-label="关闭预览">×</button></div>
     <div class="viewer-meta"><p id="viewer-conference"></p><h2 id="viewer-title"></h2><p id="viewer-authors"></p><nav><a id="viewer-source" target="_blank" rel="noopener">完整海报</a><a id="viewer-paper" target="_blank" rel="noopener">论文原文</a><a id="viewer-page" target="_blank" rel="noopener">官方页面</a></nav></div>
   </dialog>
 </body>

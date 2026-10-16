@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>海报排版列数分析进度</title>
+<style>
+body{font:15px system-ui,-apple-system,"Segoe UI",sans-serif;max-width:1100px;margin:32px auto;padding:0 18px;color:#202638;background:#f5f7fb}main{background:#fff;padding:26px;border-radius:16px;box-shadow:0 4px 20px #22304a12}h1{margin:0 0 8px;font-size:25px}.muted{color:#68748a;font-size:13px;line-height:1.6}.big{font-size:34px;font-weight:700;margin:22px 0 8px}.bar,.mini-bar{height:18px;background:#e8edf5;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#5865f2,#40b8a4);transition:width .4s}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}.box{background:#f7f8fb;padding:12px;border-radius:10px}.label{font-size:12px;color:#68748a}.value{font-size:19px;font-weight:600;margin-top:4px}.sources{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}.source{padding:11px 12px;border:1px solid #e6e9f2;border-radius:10px}.source-head{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px}.source-name{font-weight:600}.source-count{color:#68748a;font-size:12px}.mini-bar{height:7px}.mini-fill{height:100%;background:#6b62d8;transition:width .4s}.error{color:#a33;white-space:pre-wrap;margin-top:14px}@media(max-width:700px){.grid,.sources{grid-template-columns:1fr 1fr}}@media(max-width:470px){.grid,.sources{grid-template-columns:1fr}}
+</style>
+<main>
+<h1>全部海报排版列数分析</h1>
+<div class="muted" id="state">正在读取进度…</div>
+<div class="big" id="pct">0%</div><div class="bar"><div class="fill" id="fill"></div></div>
+<div class="grid"><div class="box"><div class="label">已完成</div><div class="value" id="done">—</div></div><div class="box"><div class="label">处理速度</div><div class="value" id="rate">—</div></div><div class="box"><div class="label">预计剩余</div><div class="value" id="eta">—</div></div><div class="box"><div class="label">失败</div><div class="value" id="failed">—</div></div></div>
+<div class="sources" id="sources"></div><div class="error" id="errors"></div>
+<p class="muted">输入：JPEG 1600/Q80 本地副本；输出：栏数、栏位、旋转方向和兼容性评分。页面海报仍使用远程来源。状态每 2 秒刷新。</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const time=s=>{if(!Number.isFinite(s)||s<=0)return'计算中';s=Math.round(s);if(s<60)return s+' 秒';if(s<3600)return Math.floor(s/60)+' 分钟';return(s/3600).toFixed(1)+' 小时'};
+async function update(){try{const r=await fetch('../outputs/layout-analysis/status.json?'+Date.now());const d=await r.json();const p=d.total?(d.completed+d.failed)/d.total*100:0;$('state').textContent=d.status==='complete'?'已完成':d.status==='finished_with_errors'?'已完成，但有错误':d.status==='interrupted'?'已中断':'正在分析';$('pct').textContent=p.toFixed(2)+'%';$('fill').style.width=p+'%';$('done').textContent=(d.completed||0).toLocaleString()+' / '+(d.total||0).toLocaleString();$('rate').textContent=((d.items_per_second||0)*60).toFixed(1)+' 张/分钟';$('eta').textContent=time(d.eta_seconds);$('failed').textContent=d.failed||0;const box=$('sources');box.replaceChildren();for(const[name,s]of Object.entries(d.sources||{})){const p=s.total?(s.completed+s.failed)/s.total*100:0;const e=document.createElement('div');e.className='source';e.innerHTML='<div class="source-head"><span class="source-name">'+name+'</span><span class="source-count">'+(s.completed||0).toLocaleString()+' / '+s.total.toLocaleString()+'</span></div><div class="mini-bar"><div class="mini-fill" style="width:'+p+'%"></div></div>';box.append(e)}$('errors').textContent=(d.recent_errors||[]).map(x=>x.id+'\n'+x.error).join('\n\n')}catch(e){$('state').textContent='暂时无法读取状态，稍后自动重试'}}update();setInterval(update,2000)
+</script>
