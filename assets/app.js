@@ -1,12 +1,11 @@
 const $ = (id) => document.getElementById(id);
-const groups = ["venue", "year", "type", "topic", "layout", "shape", "color"];
+const groups = ["venue", "year", "type", "layout", "shape", "color"];
 const BATCH_SIZE = 24;
 const defaults = () => ({
   q: "",
   venue: [],
   year: ["2025", "2026"],
   type: ["Oral"],
-  topic: [],
   layout: [],
   shape: [],
   color: [],
@@ -36,7 +35,7 @@ let state = defaults(),
   facets = {};
 let visibleRows = [],
   previewIndex = -1;
-const scalar = ["q", "sort", "view", "columns"];
+const scalar = ["q", "view", "columns"];
 function element(tag, text, className) {
   const e = document.createElement(tag);
   if (text) e.textContent = text;
@@ -54,13 +53,16 @@ function filterValueLabel(key, value) {
   if (key === "layout") return value === "其他" ? "其他" : `${value}列`;
   return value;
 }
+function filterOptionLabel(key, value) {
+  if (key === "layout") return value === "其他" ? "其他" : `${value} 列`;
+  return filterValueLabel(key, value);
+}
 function params(value = state) {
   const p = new URLSearchParams();
   for (const key of scalar) if (value[key]) p.set(key, value[key]);
   p.set("lab", "0");
   p.set("field", "title_authors");
   p.set("match", "any");
-  p.set("tag_match", "any");
   for (const key of groups) {
     if (value[key].length) value[key].forEach((v) => p.append(key, v));
     else if (key === "type") p.set(key, "all");
@@ -72,7 +74,6 @@ function sanitizeState(input) {
     value = { ...fallback, ...input };
   value.q = typeof value.q === "string" ? value.q : "";
   const choices = {
-    sort: ["relevance", "recent", "oral"],
     view: ["combined", "images", "text"],
     columns: ["2", "3", "4", "5"],
   };
@@ -80,18 +81,15 @@ function sanitizeState(input) {
     value[key] = allowed.includes(String(value[key]))
       ? String(value[key])
       : fallback[key];
+  value.sort = "relevance";
   const allowed = {
     venue: POSTER_CONFIG.sources.map((s) => s.venue),
     year: POSTER_CONFIG.sources.map((s) => String(s.year)),
     type: ["Oral", "Spotlight", "Poster"],
-    topic: [
-      ...Object.keys(POSTER_CONFIG.patterns),
-      ...Object.keys(POSTER_CONFIG.subtopics),
-    ],
     layout: ["1", "2", "3", "4", "其他"],
     shape: ["横图", "竖图"],
   };
-  for (const key of ["venue", "year", "type", "topic", "layout", "shape"])
+  for (const key of ["venue", "year", "type", "layout", "shape"])
     value[key] = [
       ...new Set(
         (Array.isArray(value[key]) ? value[key] : fallback[key]).filter(
@@ -123,15 +121,6 @@ function fromURL(p) {
     value.venue = [venue];
     value.year = [year];
   }
-  value.topic = [
-    ...new Set([
-      ...value.topic,
-      ...p
-        .getAll("tag")
-        .flatMap((v) => v.split(","))
-        .filter(Boolean),
-    ]),
-  ];
   return sanitizeState(value);
 }
 function readStored(key, fallback) {
@@ -151,16 +140,12 @@ state = initial.size
   ? fromURL(initial)
   : { ...defaults(), ...readStored("poster-filter-last", {}) };
 for (const key of groups) if (!Array.isArray(state[key])) state[key] = [];
-state.topic = [
-  ...new Set([...state.topic, ...(Array.isArray(state.tag) ? state.tag : [])]),
-];
-state.topic = state.topic.filter((v) => v !== "其他方向");
 delete state.tag;
 delete state.page;
 state = sanitizeState(state);
 // Single-choice controls share the same menu surface as multi-choice filters.
 function syncDropdowns() {
-  for (const key of ["sort", "view", "columns"]) {
+  for (const key of ["view", "columns"]) {
     const select = $(key),
       menu = $("menu-" + key);
     if (!select.selectedOptions.length) select.value = defaults()[key];
@@ -173,7 +158,7 @@ function syncDropdowns() {
     }
   }
 }
-for (const key of ["sort", "view", "columns"]) {
+for (const key of ["view", "columns"]) {
   const select = $(key),
     menu = element("details", null, "filter-menu single-menu");
   menu.id = "menu-" + key;
@@ -393,6 +378,9 @@ function initColorPicker() {
   });
   trigger.addEventListener("click", (e) => {
     e.stopPropagation();
+    document
+      .querySelectorAll(".filter-menu[open]")
+      .forEach((menu) => (menu.open = false));
     const open = !popover.hidden;
     popover.hidden = open;
     if (!open) {
@@ -472,24 +460,17 @@ function renderFacets() {
   const focus = active?.matches("input[type=checkbox][name]")
     ? { name: active.name, value: active.value }
     : null;
-  for (const key of ["venue", "year", "type", "topic", "layout", "shape"]) {
+  for (const key of ["venue", "year", "type", "layout", "shape"]) {
     const selected = state[key];
     $("selected-" + key).textContent =
       selected.length === 0
         ? "全部"
         : selected.length === 1
           ? filterValueLabel(key, selected[0])
-          : key === "type"
-            ? selected.join(" + ")
-            : selected.length + " 项";
+          : selected.length + " 项";
     const container = $("facet-" + key);
     container.replaceChildren();
     for (const item of facets[key] || []) {
-      if (
-        key === "topic" &&
-        item.value === Object.keys(POSTER_CONFIG.subtopics)[0]
-      )
-        container.append(element("hr", null, "topic-separator"));
       const label = element("label", null, "choice");
       const input = document.createElement("input");
       input.type = "checkbox";
@@ -507,7 +488,7 @@ function renderFacets() {
       });
       label.append(
         input,
-        element("span", filterValueLabel(key, item.value)),
+        element("span", filterOptionLabel(key, item.value)),
         element("span", item.count.toLocaleString(), "option-count"),
       );
       container.append(label);
@@ -534,8 +515,7 @@ function renderActive() {
     venue: "会议",
     year: "年份",
     type: "录用",
-    topic: "主题",
-    layout: "排版列数",
+    layout: "排版",
     shape: "形状",
   };
   function appendGroup(name, values, remove, key = "") {
@@ -562,7 +542,7 @@ function renderActive() {
       reflect();
       changed();
     });
-  for (const key of ["venue", "year", "type", "topic", "layout", "shape"])
+  for (const key of ["venue", "year", "type", "layout", "shape"])
     if (state[key].length)
       appendGroup(
         names[key],
@@ -642,18 +622,7 @@ function card(row) {
   badge.title = "官方录用字段：" + (row.decision_raw || "未注明");
   small.append(badge);
   content.append(small, element("h2", row.title));
-  const tags = element("div", null, "paper-tags");
-  for (const tag of row.tags) {
-    const button = element("button", tag);
-    button.type = "button";
-    button.title = "按此主题筛选";
-    button.addEventListener("click", () => {
-      state.topic = [tag];
-      changed();
-    });
-    tags.append(button);
-  }
-  content.append(element("p", row.authors, "card-authors"), tags);
+  content.append(element("p", row.authors, "card-authors"));
   const nav = element("nav");
   const detail = element("a", "详情");
   detail.href = row.poster_url;
@@ -786,17 +755,14 @@ for (const key of ["q"])
     clearTimeout(debounce);
     debounce = setTimeout(changed, 300);
   });
-for (const key of ["sort"])
-  $(key).addEventListener("change", () => {
-    state[key] = $(key).value;
-    changed();
-  });
 function reset() {
   state = { ...defaults(), view: state.view, columns: state.columns };
   reflect();
   changed();
 }
-$("reset").addEventListener("click", reset);
+document.querySelectorAll("[data-reset]").forEach((button) => {
+  button.addEventListener("click", reset);
+});
 $("empty-reset").addEventListener("click", reset);
 for (const key of ["view", "columns"])
   $(key).addEventListener("change", () => {
@@ -911,6 +877,22 @@ for (const menu of document.querySelectorAll(".filter-menu"))
       requestAnimationFrame(() => positionFilterPopover(menu));
     } else clearFloatingPosition(menu.querySelector(".filter-popover"));
   });
+document.addEventListener(
+  "click",
+  (event) => {
+    const summary = event.target.closest(".filter-menu > summary");
+    if (!summary) return;
+    const current = summary.parentElement;
+    document.querySelectorAll(".filter-menu[open]").forEach((menu) => {
+      if (menu !== current) menu.open = false;
+    });
+    if (colorPicker?.popover && !colorPicker.popover.hidden) {
+      colorPicker.popover.hidden = true;
+      clearFloatingPosition(colorPicker.popover);
+    }
+  },
+  true,
+);
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".filter-menu"))
     document

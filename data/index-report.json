@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-10-09T17:33:03.599796+00:00",
+  "generated_at": "2026-10-16T16:08:37.093647+00:00",
   "total": 35884,
-  "file_bytes": 13750267,
+  "file_bytes": 12713035,
   "retained_fields": [
     "event_id",
     "title",
     "authors",
     "acceptance_type",
     "decision_raw",
-    "directions",
-    "tags",
     "poster_url",
     "paper_url",
     "conference_page"

@@ -53,14 +53,14 @@ class FakeImage extends EventTarget {
   vm.runInContext(read("assets/images.js"), context);
   const app = read("assets/app.js");
   vm.runInContext(
-    "const groups=['venue','year','type','topic','layout','shape'];" +
-      "const defaults=()=>({q:'',venue:[],year:[],type:['Oral','Spotlight'],topic:[]," +
+    "const groups=['venue','year','type','layout','shape'];" +
+      "const defaults=()=>({q:'',venue:[],year:[],type:['Oral','Spotlight']," +
       "layout:[],shape:[],color:[],sort:'relevance',view:'combined',columns:'2'});" +
       extract(app, "sanitizeState"),
     context,
   );
   const state = vm.runInContext(
-    "sanitizeState({sort:'bad',view:'bad',columns:99,q:{bad:true},venue:['ICML','bad'],year:['2025','9999'],topic:['其他方向'],type:42})",
+    "sanitizeState({sort:'bad',view:'bad',columns:99,q:{bad:true},venue:['ICML','bad'],year:['2025','9999'],type:42})",
     context,
   );
   assert.equal(state.sort, "relevance");
@@ -69,7 +69,6 @@ class FakeImage extends EventTarget {
   assert.equal(state.q, "");
   assert.deepEqual([...state.venue], ["ICML"]);
   assert.deepEqual([...state.year], ["2025"]);
-  assert.deepEqual([...state.topic], []);
   let observed = 0,
     pending = 1;
   Object.assign(context, {
@@ -198,7 +197,7 @@ class FakeImage extends EventTarget {
   );
   assert(preserved, "Reject bad metadata without overwriting cached rows");
   const csv = await vm.runInContext(
-    "new BrowserPosterCatalog().exportCSV({q:'',venue:['ICML'],year:['2026'],type:[],topic:[],sort:'title'}).text()",
+    "new BrowserPosterCatalog().exportCSV({q:'',venue:['ICML'],year:['2026'],type:[],sort:'title'}).text()",
     context,
   );
   const head = csv.split("\r\n")[0];
@@ -276,10 +275,6 @@ class FakeImage extends EventTarget {
       lang === "en"
         ? "Remove filter: Search: Agents"
         : "移除筛选：搜索：Agents",
-    );
-    assert.equal(
-      locale.window.PosterI18n.text("大模型应用"),
-      lang === "en" ? "LLM applications" : "大模型应用",
     );
   }
   console.log(

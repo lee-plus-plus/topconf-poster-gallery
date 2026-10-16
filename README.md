@@ -28,7 +28,7 @@
 
 <p align="center">
   <a href="https://lee-plus-plus.github.io/topconf-poster-gallery/">
-    <img src="https://raw.githubusercontent.com/lee-plus-plus/topconf-poster-gallery/main/docs/images/gallery-overview.jpg" alt="Four-column poster gallery with conference, year, acceptance and topic filters" width="100%">
+    <img src="https://raw.githubusercontent.com/lee-plus-plus/topconf-poster-gallery/main/docs/images/gallery-overview.jpg" alt="Four-column poster gallery with conference, year, acceptance filters" width="100%">
   </a>
 </p>
 
@@ -38,33 +38,33 @@
 
 A searchable gallery of **35,884 paper posters** from 17 editions of NeurIPS, ICML, and ICLR. Each entry connects the poster with its paper, authors, conference, year, and acceptance type. Use it to compare how papers present their motivation, methods, and results—or to browse work in a research area.
 
-- **Find relevant papers.** Filter by conference, year, acceptance type, and topic. Search titles, authors, and topic labels; combine filters across categories.
+- **Find relevant papers.** Filter by conference, year, acceptance type, and search titles or authors; combine filters across categories.
 - **Browse visually.** Choose images and text, images only, or text only. The masonry gallery supports 2–5 columns on desktop, incremental scrolling, full-size previews, and manual rotation.
 - **Explore AI4Science.** Use the metadata and source links to assemble research collections for scientific-document understanding, multimodal retrieval, and automatic poster generation.
 - **Build a reading list.** Follow links to the paper and official conference page.
-- **Switch languages.** Chinese and English controls and topic labels, with your preference saved locally. Paper titles and author names stay in their original form.
+- **Switch languages.** Chinese and English controls, with your preference saved locally. Paper titles and author names stay in their original form.
 - **Visit and browse.** [Open the online gallery](https://lee-plus-plus.github.io/topconf-poster-gallery/) in your browser. No account or installation required; poster images load from official conference sources as you browse.
 
-The initial view selects **Oral papers from 2025 and 2026**. Clear or change the year and acceptance filters to browse the full index, including regular Posters. Topic labels emphasize semi-supervised, weakly supervised, and unsupervised learning; LLM applications; and robust and trustworthy machine learning.
+The initial view selects **Oral papers from 2025 and 2026**. Clear or change the year and acceptance filters to browse the full index, including regular Posters.
 
 ## 中文
 
 收录 NeurIPS、ICML、ICLR 共 17 届会议的 **35,884 张论文海报**，将海报与论文原文、作者、会议、年份和录用类型关联起来。既可以按研究方向找论文，也可以对照不同海报，学习如何组织研究动机、方法和实验结果。
 
-- **快速筛选**：按会议、年份、录用类型和主题组合筛选，支持搜索标题、作者及中英文主题标签。
+- **快速筛选**：按会议、年份和录用类型筛选，支持搜索标题和作者。
 - **专注看图**：图像和文字、仅图像、仅文字三种展示方式；桌面支持 2–5 列瀑布流、滚动加载、大图预览与手动旋转。
 - **探索 AI4Science**：利用海报元数据与来源链接组织研究材料，探索科学文档理解、多模态检索与海报自动生成等任务。
 - **整理清单**：直接访问论文原文和会议页面。
-- **中英文切换**：界面与主题标签支持双语，自动保存语言偏好，论文标题与作者保留原文。
+- **中英文切换**：界面支持双语，自动保存语言偏好，论文标题与作者保留原文。
 - **打开即用**：[访问在线画廊](https://lee-plus-plus.github.io/topconf-poster-gallery/)，无需注册或安装；浏览时按需加载官方海报图片。
 
-首次打开默认筛选 **2025、2026 年的 Oral 记录**；修改年份和录用条件即可浏览完整索引，包括普通 Poster。预定义主题重点覆盖半监督、弱监督与无监督学习，LLM 应用，以及鲁棒可信机器学习。
+首次打开默认筛选 **2025、2026 年的 Oral 记录**；修改年份和录用条件即可浏览完整索引，包括普通 Poster。
 
 ## Start browsing / 开始浏览
 
 ### [lee-plus-plus.github.io/topconf-poster-gallery →](https://lee-plus-plus.github.io/topconf-poster-gallery/)
 
-1. **Find papers.** Search a title, author, or topic; narrow the results by conference, year, and acceptance type. 搜索标题、作者或主题，再按会议、年份和录用类型缩小范围。
+1. **Find papers.** Search a title or author; narrow the results by conference, year, and acceptance type. 搜索标题或作者，再按会议、年份和录用类型缩小范围。
 2. **Explore posters.** Choose your view and column count, then click a poster for a full-size preview. 选择展示方式和列数，点击海报查看大图。
 3. **Keep references.** Open the paper or official page. 访问论文原文和官方页面。
 
@@ -91,23 +91,27 @@ Counts refer to indexed records with official poster-image links, not all accept
 
 数量指具有官方海报图片链接的索引条目，不代表会议全部录用论文，也不保证所有远程图片始终可用。仓库提供元数据与链接，不打包全部海报图片。
 
-## Data and topics / 数据与主题
+## Data / 数据
 
 Conference metadata comes from official sources. Acceptance labels are normalized for filtering: ICLR 2023's `notable-top-5%` / `notable-top-25%` map to Oral / Spotlight; ICML 2022's Long / Short Presentation use the same mapping. Original decision text is preserved.
 
 会议元数据来自官方源。录用标签经过统一：ICLR 2023 的 `notable-top-5%` / `notable-top-25%`、ICML 2022 的 Long / Short Presentation 分别映射为 Oral / Spotlight，同时保留原始录用字段。
 
-Topics are assigned by keyword rules over titles and available source keywords and topics. They support discovery, but have not been manually verified. Papers remain in the gallery even when no topic matches. Acceptance types and topic labels are not measures of citation impact.
+The index stores source metadata and links; it does not store derived keyword labels or topic classifications. Acceptance types are not measures of citation impact.
 
-主题由标题及来源中可用的关键词、官方主题进行规则匹配，未经逐篇人工核验，可能漏标或误标。未命中主题的论文仍然收录。录用类型与主题标签不代表引用影响力评价。
+索引保存来源元数据和链接，不再保存规则生成的关键词标签或主题分类。录用类型不代表引用影响力评价。
 
 [CSV fields and research use / CSV 字段与研究使用](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/DATA_SCHEMA.md) · [Source coverage and field audit / 来源覆盖与字段审计](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/SOURCE_AUDIT.md) · [Maintenance guide / 维护指南](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/docs/MAINTENANCE.md)
 
+## Changelog / 更新记录
+
+See [CHANGELOG.md](CHANGELOG.md) for release and maintenance notes.
+
 ## Contributing / 参与完善
 
-Found a broken poster link, incorrect metadata, or a misleading topic label? [Open an issue](https://github.com/lee-plus-plus/topconf-poster-gallery/issues) with the paper title, conference/year, source URL, and suggested correction. Contributions to source coverage, filtering, and translations are welcome.
+Found a broken poster link or incorrect metadata? [Open an issue](https://github.com/lee-plus-plus/topconf-poster-gallery/issues) with the paper title, conference/year, source URL, and suggested correction. Contributions to source coverage, filtering, and translations are welcome.
 
-如果发现海报链接失效、论文信息错误或主题标注不准确，欢迎提交 Issue，并附上论文标题、会议年份、来源链接及建议修改。也欢迎补充数据源、改进筛选和翻译。
+如果发现海报链接失效、论文信息错误，欢迎提交 Issue，并附上论文标题、会议年份、来源链接及建议修改。也欢迎补充数据源、改进筛选和翻译。
 
 ## Acknowledgments and license / 致谢与许可
 
@@ -118,3 +122,13 @@ Inspired by [Top-Conf Figure Gallery](https://github.com/qwdwqfwq/topconf-paper-
 Code is licensed under the [MIT License](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/LICENSE). Posters, papers, logos, and other third-party materials belong to their respective rights holders and are not covered by the code license. See [NOTICE](https://github.com/lee-plus-plus/topconf-poster-gallery/blob/main/NOTICE.md).
 
 代码采用 MIT License。海报、论文、标识及其他第三方材料的权利归各自权利人所有，不适用本项目的代码许可。版权或署名问题可通过 Issue 联系维护者。
+
+## 📌 Citation / 引用
+
+```bibtex
+@misc{topconf_poster_gallery,
+  title  = {Top-Conf Poster Gallery: A Curated Gallery of Conference Paper Posters from ICLR, ICML and NeurIPS (2021--2026)},
+  year   = {2026},
+  url    = {https://github.com/lee-plus-plus/topconf-poster-gallery}
+}
+```

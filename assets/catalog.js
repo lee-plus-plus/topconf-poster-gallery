@@ -120,154 +120,18 @@ const POSTER_CONFIG = {
       url: "https://iclr.cc/static/virtual/data/iclr-2021-orals-posters.json",
     },
   ],
-  patterns: {
-    半弱无监督学习: [
-      "semi[- ]supervised",
-      "weak(?:ly)?[- ]supervis",
-      "unsupervised",
-      "self[- ]supervised",
-      "contrastive learning",
-      "positive.unlabeled",
-      "noisy label",
-      "label noise",
-      "partial label",
-      "clustering",
-      "pseudo[- ]label",
-    ],
-    大模型应用: [
-      "large language",
-      "language model",
-      "\\bllms?\\b",
-      "hallucin",
-      "speculative decod",
-      "kv.cache",
-      "test.time scal",
-      "inference.time",
-      "reasoning",
-      "retrieval.augmented",
-      "\\bagents?\\b",
-      "quantiz",
-    ],
-    鲁棒可信机器学习: [
-      "uncertainty",
-      "conformal",
-      "calibrat",
-      "robust",
-      "out.of.distribution",
-      "adversarial",
-      "trustworth",
-      "reliab",
-      "abstain",
-      "abstention",
-      "certif",
-      "fairness",
-      "privacy",
-      "ood detection",
-    ],
-  },
-  subtopics: {
-    半监督学习: ["semi[- ]supervis", "pseudo[- ]label"],
-    弱监督与标签学习: [
-      "weak(?:ly)?[- ]supervis",
-      "partial label",
-      "positive.unlabeled",
-      "noisy label",
-      "label noise",
-    ],
-    无监督与聚类: ["unsupervis", "cluster"],
-    自监督与对比学习: ["self[- ]supervis", "contrastive learn"],
-    高效推理: [
-      "speculative",
-      "kv.cache",
-      "quantiz",
-      "prun",
-      "compress",
-      "serving",
-      "efficient.*(?:inference|decod)",
-      "(?:inference|decod).*accelerat",
-    ],
-    KV缓存: ["kv.cache", "kvzip", "key.value.*cache"],
-    推测解码: ["speculative.*(?:decod|sampl|inference)", "draft.*model"],
-    量化与压缩: ["quantiz", "compress", "prun", "ternariz", "low.bit"],
-    幻觉检测与缓解: [
-      "hallucin",
-      "factuality",
-      "factual.*(?:error|consisten|align)",
-      "grounded attribution",
-    ],
-    智能体: [
-      "\\bagents?\\b",
-      "agentic",
-      "tool.use",
-      "tool.call",
-      "computer.use",
-    ],
-    多智能体: ["multi.agent", "agent.*collaborat", "agent.*coordinat"],
-    检索增强RAG: ["retrieval.augmented", "\\brag\\b"],
-    推理与测试时扩展: [
-      "reasoning",
-      "test.time.scal",
-      "chain.of.thought",
-      "best.of.n",
-    ],
-    大模型安全与对齐: [
-      "(?:language model|\\bllm).*safety",
-      "jailbreak",
-      "prompt.injection",
-      "rlhf",
-      "(?:language model|\\bllm).*align",
-      "(?:align|safety).*(?:language model|\\bllm)",
-    ],
-    不确定性: ["uncertainty", "uncertain", "epistemic", "aleatoric"],
-    校准: ["calibrat"],
-    保形预测: ["conformal"],
-    分布外与泛化: [
-      "out.of.distribution",
-      "\\bood\\b",
-      "distribution.shift",
-      "domain.generali",
-    ],
-    对抗与鲁棒性: ["adversarial", "robust"],
-    隐私与公平: ["privacy", "private", "fairness", "fair learning"],
-  },
-  llmContext:
-    "language|\\bllms?\\b|foundation|vision.language|multimodal|mllm|computer.use|web.agent|kv.cache|kvzip|speculative.decod|\\bgpt\\b",
-  llmTags: [
-    "KV缓存",
-    "多智能体",
-    "大模型安全与对齐",
-    "幻觉检测与缓解",
-    "推测解码",
-    "推理与测试时扩展",
-    "智能体",
-    "检索增强RAG",
-    "量化与压缩",
-    "高效推理",
-  ],
   retainedFields: [
     "event_id",
     "title",
     "authors",
     "acceptance_type",
     "decision_raw",
-    "directions",
-    "tags",
     "poster_url",
     "paper_url",
     "conference_page",
   ],
 };
 /* Browser-owned metadata, filtering and CSV; no local HTTP API. */
-const compileMap = (value) =>
-  Object.fromEntries(
-    Object.entries(value).map(([key, patterns]) => [
-      key,
-      patterns.map((p) => new RegExp(p, "i")),
-    ]),
-  );
-const broadPatterns = compileMap(POSTER_CONFIG.patterns),
-  finePatterns = compileMap(POSTER_CONFIG.subtopics),
-  llmContext = new RegExp(POSTER_CONFIG.llmContext, "i");
 const plain = (value) => {
   const e = document.createElement("textarea");
   e.innerHTML = String(value || "").replace(/<[^>]*>/g, " ");
@@ -281,36 +145,6 @@ const safeURL = (base, value) => {
     return "";
   }
 };
-function classifyPoster(title, keywords, topic) {
-  const text = [title, keywords, topic].join(" "),
-    excluded =
-      /conformal isometr|conformal geom|camera pose|camera calibrat/i.test(
-        title,
-      ),
-    llm = llmContext.test(text);
-  const directions = Object.entries(broadPatterns)
-    .filter(
-      ([k, ps]) =>
-        ps.some((p) => p.test(text)) &&
-        !(k === "大模型应用" && !llm) &&
-        !(k === "鲁棒可信机器学习" && excluded),
-    )
-    .map(([k]) => k);
-  const tags = Object.entries(finePatterns)
-    .filter(
-      ([k, ps]) =>
-        ps.some((p) => p.test(text)) &&
-        !(POSTER_CONFIG.llmTags.includes(k) && !llm) &&
-        !(excluded && ["保形预测", "校准", "对抗与鲁棒性"].includes(k)),
-    )
-    .map(([k]) => k);
-  if (
-    tags.some((k) => POSTER_CONFIG.llmTags.includes(k)) &&
-    !directions.includes("大模型应用")
-  )
-    directions.push("大模型应用");
-  return { directions: directions.length ? directions : ["其他方向"], tags };
-}
 function officialPaperLink(event, source, previous) {
   const candidates = [
     event.paper_url,
@@ -374,12 +208,7 @@ function normalizePosters(data, source, fallbackRows = []) {
           eligible.find((m) => m.detailed_kind !== "lowres") || eligible[0];
       if (!full) return [];
       const title = e.name || "未命名论文",
-        decision = e.decision || "",
-        keywords = Array.isArray(e.keywords)
-          ? e.keywords.join("; ")
-          : String(e.keywords || ""),
-        official_topic = plain(e.topic),
-        labels = classifyPoster(title, keywords, official_topic);
+        decision = e.decision || "";
       const r = {
         id: source.id + "-" + e.id,
         event_id: e.id,
@@ -390,11 +219,7 @@ function normalizePosters(data, source, fallbackRows = []) {
         source_id: source.id,
         acceptance_type: normalizedAcceptance(decision, source),
         decision_raw: decision,
-        ...labels,
-        relevance_score: labels.tags.length,
-        official_topic,
-        keywords,
-        abstract: plain(e.abstract),
+        relevance_score: 0,
         poster_url: safeURL(source.base, full.file),
         paper_url: officialPaperLink(
           e,
@@ -407,13 +232,6 @@ function normalizePosters(data, source, fallbackRows = []) {
         ),
         metadata_source: source.url,
       };
-      for (const key of [
-        "abstract",
-        "official_topic",
-        "keywords",
-        "institutions",
-      ])
-        if (!POSTER_CONFIG.retainedFields.includes(key)) delete r[key];
       return [r];
     });
 }
@@ -510,7 +328,7 @@ class BrowserPosterCatalog {
             source_id: source.id,
             venue: source.venue,
             year: source.year,
-            relevance_score: row.tags.length,
+            relevance_score: 0,
             metadata_source: source.url,
           };
         });
@@ -641,35 +459,17 @@ class BrowserPosterCatalog {
       }
     }
     const terms = searchTerms(state.q);
-    const text = (r) =>
-      [
-        r.title,
-        r.authors,
-        ...(r.tags || []).flatMap((t) => [
-          t,
-          window.PosterI18n?.english(t) || t,
-        ]),
-        ...(r.directions || []).flatMap((t) => [
-          t,
-          window.PosterI18n?.english(t) || t,
-        ]),
-        r.official_topic,
-        r.keywords,
-      ]
-        .join(" ")
-        .toLowerCase();
+    const text = (r) => [r.title, r.authors].join(" ").toLowerCase();
     const candidates = allRows.filter(
       (r) => !terms.length || terms.some((t) => text(r).includes(t)),
     );
     const values = (r, key) =>
-      key === "topic"
-        ? [...r.directions, ...r.tags]
-        : key === "shape"
-          ? [shapeLabel(r.shape_dimensions)]
-          : key === "layout"
-            ? [layoutLabel(r)]
-            : [String(key === "type" ? r.acceptance_type : r[key])];
-    const keys = ["venue", "year", "type", "topic", "layout", "shape"];
+      key === "shape"
+        ? [shapeLabel(r.shape_dimensions)]
+        : key === "layout"
+          ? [layoutLabel(r)]
+          : [String(key === "type" ? r.acceptance_type : r[key])];
+    const keys = ["venue", "year", "type", "layout", "shape"];
     const colorDistance = (a, b) => {
       const parse = (v) => {
         const m = String(v || "").match(/^#([0-9a-f]{6})$/i);
@@ -710,7 +510,6 @@ class BrowserPosterCatalog {
           (a, b) => Number(b) - Number(a),
         ),
         type: ["Oral", "Spotlight", "Poster"],
-        topic: [...Object.keys(broadPatterns), ...Object.keys(finePatterns)],
         layout: ["1", "2", "3", "4", "其他"],
         shape: ["横图", "竖图"],
       },
@@ -788,8 +587,6 @@ class BrowserPosterCatalog {
         "venue",
         "year",
         "acceptance_type",
-        "directions",
-        "tags",
         "poster_url",
         "paper_url",
         "decision_raw",
@@ -808,8 +605,6 @@ class BrowserPosterCatalog {
         "会议",
         "年份",
         "中稿类型",
-        "研究方向（多标签）",
-        "细分主题",
         "海报图片链接",
         "原文链接",
         "官方录用字段",

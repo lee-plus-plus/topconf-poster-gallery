@@ -28,7 +28,7 @@ vm.runInContext(
   const result = await vm.runInContext(
     `(async()=>{
  const c=new BrowserPosterCatalog();
- const base={q:'',venue:[],year:[],type:['Oral','Spotlight'],topic:[],tag:[],sort:'relevance'};
+ const base={q:'',venue:[],year:[],type:['Oral','Spotlight'],sort:'relevance'};
  const query=patch=>c.query({...base,...patch},{all:true});
  const all=query({type:[]}),featured=query({});
  const mappings = [
@@ -55,9 +55,6 @@ vm.runInContext(
  const union=query({venue:['ICML','ICLR']});
  const year=query({venue:['ICML','ICLR'],year:['2026']});
  const search=query({q:'calibration language'}),a=query({q:'calibration'}),b=query({q:'language'});
- const broad=query({topic:['大模型应用']}),fine=query({topic:[Object.keys(finePatterns)[0]]}),mixed=query({topic:['大模型应用',Object.keys(finePatterns)[0]]});
- if(mixed.matched!==new Set([...broad.rows,...fine.rows].map(r=>r.id)).size)throw Error('Unified topic OR failed');
- if(!mixed.facets.topic.some(f=>f.value===Object.keys(finePatterns)[0])||!mixed.facets.topic.some(f=>f.value==='大模型应用'))throw Error('Unified topic facet missing');
  const csv=await c.exportCSV({ ...base,venue:['ICML','ICLR'],year:['2026'] }).text();
  return {
   total:all.matched,featured:featured.matched,union:union.matched,

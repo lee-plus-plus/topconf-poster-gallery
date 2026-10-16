@@ -21,22 +21,20 @@ def main():
     )
     m = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
-    # Base identifiers and derived labels are always included; optional fields must pass every source.
+    # Keep only fields used by the gallery; optional fields must pass every source.
     columns = [
         "event_id",
         "title",
         "authors",
         "acceptance_type",
         "decision_raw",
-        "directions",
-        "tags",
         "poster_url",
         "paper_url",
         "conference_page",
     ]
     optional = [
         k
-        for k in ("abstract", "official_topic", "keywords", "institutions")
+        for k in ("abstract", "institutions")
         if report["common_fields"][k]["eligible"]
     ]
     columns += optional
