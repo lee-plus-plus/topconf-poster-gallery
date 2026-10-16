@@ -8,7 +8,9 @@ python scripts/audit_sources.py 审计候选来源和原始缓存，缺少缓存
 
 图像按需加载。离线时仍可筛选索引，但未缓存图像无法显示。方向识别低置信度时保留原图，也可手动旋转。
 
-静态网站部署只需 index.html、assets/ 和发布用 data/ 文件；不要上传 _legacy/ 或 data/raw/。源代码已同步到 GitHub，网站托管需单独配置。
+静态网站部署只需 index.html、assets/ 和发布用 data/ 文件；不要上传 data/raw/、images/archive*/、images/metadata-pilot/、outputs/ 或 promotion/。这些目录分别是本地归档、分析中间文件和宣传物料，不参与静态站点运行。源代码已同步到 GitHub，网站托管需单独配置。
+
+旧版 `_legacy/` 目录也不参与运行、构建或校验；它仅保存历史参考仓库和旧下载归档，可移出项目目录单独保存。
 
 重新抓取公开官方元数据：python scripts/audit_sources.py --refresh；然后运行 python scripts/build_index.py。浏览器刷新遇到核心字段完整度低于 90% 时保留已有索引。
 
@@ -37,8 +39,11 @@ node --check assets/i18n.js
 - `data/sources.json`：会议来源配置。
 - `scripts/`：来源审计、索引构建和校验工具。
 - `docs/`：来源审计说明、维护指南及参考项目许可。
-- `_legacy/`：原有 300 张本地海报及历史清单，仅在维护者本地保留，不进入 Git。
+- `_legacy/`：历史参考仓库和旧下载归档，不参与当前项目；可移出项目目录单独保存。
 - `data/raw/`：来源原始缓存，不进入 Git；新克隆的仓库不包含它，重建索引前需要准备原始缓存并重新审计。
+- `images/archive*/`：本地海报归档，体积很大，只应在仓库外单独备份。
+- `images/metadata-pilot/`、`outputs/`：可重建的布局分析中间文件，清理后不影响网站。
+- `promotion/`：宣传图和可编辑物料，不属于网站发布内容。
 
 Git 只备份已跟踪文件；本地归档与原始缓存需要单独备份。
 

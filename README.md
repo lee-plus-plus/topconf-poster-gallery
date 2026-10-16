@@ -45,7 +45,7 @@ A searchable gallery of **35,884 paper posters** from 17 editions of NeurIPS, IC
 - **Switch languages.** Chinese and English controls and topic labels, with your preference saved locally. Paper titles and author names stay in their original form.
 - **Visit and browse.** [Open the online gallery](https://lee-plus-plus.github.io/topconf-poster-gallery/) in your browser. No account or installation required; poster images load from official conference sources as you browse.
 
-The default selection shows **5,987 Oral / Spotlight entries**. Clear the acceptance filter to include regular Posters. Topic labels emphasize semi-supervised, weakly supervised, and unsupervised learning; LLM applications; and robust and trustworthy machine learning.
+The initial view selects **Oral papers from 2025 and 2026**. Clear or change the year and acceptance filters to browse the full index, including regular Posters. Topic labels emphasize semi-supervised, weakly supervised, and unsupervised learning; LLM applications; and robust and trustworthy machine learning.
 
 ## 中文
 
@@ -58,7 +58,7 @@ The default selection shows **5,987 Oral / Spotlight entries**. Clear the accept
 - **中英文切换**：界面与主题标签支持双语，自动保存语言偏好，论文标题与作者保留原文。
 - **打开即用**：[访问在线画廊](https://lee-plus-plus.github.io/topconf-poster-gallery/)，无需注册或安装；浏览时按需加载官方海报图片。
 
-默认展示 **5,987 条 Oral / Spotlight 记录**，清空录用条件即可浏览普通 Poster。预定义主题重点覆盖半监督、弱监督与无监督学习，LLM 应用，以及鲁棒可信机器学习。
+首次打开默认筛选 **2025、2026 年的 Oral 记录**；修改年份和录用条件即可浏览完整索引，包括普通 Poster。预定义主题重点覆盖半监督、弱监督与无监督学习，LLM 应用，以及鲁棒可信机器学习。
 
 ## Start browsing / 开始浏览
 

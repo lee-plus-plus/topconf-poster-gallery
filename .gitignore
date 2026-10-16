@@ -6,6 +6,14 @@ node_modules/
 
 data/raw/
 
+# Local poster archives and generated analysis/promotion artifacts.
+# These are large or reproducible and are not part of the static site release.
+images/archive/
+images/archive-jpg1600q80/
+images/metadata-pilot/
+outputs/
+promotion/
+
 # Local environments, downloaded media and temporary output
 .venv/
 venv/

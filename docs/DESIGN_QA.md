@@ -1,5 +1,9 @@
 # Design QA
 
+## Current snapshot — 2026-10-16
+
+The checked-in index contains 35,884 records across 17 sources; 5,987 are Oral or Spotlight. The current initial UI state selects Oral records from 2025 and 2026, with four columns. Python validation, catalog filtering/CSV validation, and JavaScript syntax checks pass. `scripts/validate_reliability.cjs` now provides the `layout`, `shape`, and `color` state fields required by the current sanitizer; rerun it after changes to the loader or filter state.
+
 2026-10-10：视觉与主要浏览交互检查通过。
 
 参考：https://lee-plus-plus.github.io/topconf-paper-figure-gallery/
